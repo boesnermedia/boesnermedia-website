@@ -85,7 +85,7 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
   <div class="wrap split">
     <div class="skew" style="aspect-ratio: 16 / 10; margin: 0 24px">
       <div class="skew-media" style="inset: 16px 40px 16px 28px; background: var(--navy-700)">
-        {% if c.video %}<video src="{{ c.video }}" controls preload="none"></video>{% else %}<span class="placeholder" style="color: #fff">[Video-Ausschnitt]</span>{% endif %}
+        {% if c.video %}<video src="{{ c.video }}" {% if c.bild %}poster="{{ c.bild }}"{% endif %} controls playsinline preload="none"></video>{% elif c.bild %}<img src="{{ c.bild }}" alt="{{ c.titel }} {{ c.titel_akzent }}" loading="lazy" style="object-position: center top">{% else %}<span class="placeholder" style="color: #fff">[Video-Ausschnitt]</span>{% endif %}
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 18px">

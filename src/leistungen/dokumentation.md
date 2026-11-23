@@ -10,7 +10,7 @@ eyebrow: "Dokumentation & Kampagne · Bike, Outdoor, Events"
 claim: "Geschichten mit Puls."
 intro: "Ein Launch, ein Athlet, ein Jubiläum – solche Momente passieren nur einmal. Ich bin mittendrin statt daneben und mache daraus eine Geschichte, die Gänsehaut erzeugt: als Film, Trailer, Social-Clips und Fotos."
 video: ""
-bild: "/assets/uploads/radsport-wangen-fokus.jpg"
+bild: "/assets/uploads/simplon-pride-nyc.jpg"
 ziel_titel: "Wofür Marken Momentum einsetzen"
 ziele:
   - titel: Launches erzählen
