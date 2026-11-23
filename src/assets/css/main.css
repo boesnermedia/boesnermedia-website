@@ -264,3 +264,17 @@ a.other-paket:hover, a.other-paket:focus-visible { border-color: var(--magenta-5
 @media (max-width: 720px) { .cards-2 { grid-template-columns: 1fr; } .cards-2 .card-media { aspect-ratio: 16 / 9; } }
 
 .card h3 { overflow-wrap: anywhere; hyphens: auto; }
+
+.h-paket .paket-name { display: block; margin-bottom: 8px; font-size: 14px; line-height: 20px; letter-spacing: 2px; color: var(--muted); }
+
+.quote { margin: 0; border-left: 4px solid var(--magenta-500); padding-left: 32px; }
+.quote p { margin: 0; font-size: 40px; line-height: 48px; font-weight: 800; letter-spacing: -1px; }
+@media (max-width: 720px) { .quote { padding-left: 20px; } .quote p { font-size: 26px; line-height: 32px; } }
+.numbers-3 { grid-template-columns: repeat(3, 1fr); row-gap: 40px; }
+@media (max-width: 960px) { .numbers-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .numbers-3 { grid-template-columns: 1fr; } }
+.h-paket { overflow-wrap: anywhere; hyphens: auto; }
+
+/* Schräge Medienflächen dürfen nie seitlich scrollen lassen */
+html, body { overflow-x: clip; }
+.paket-hero { overflow: hidden; }

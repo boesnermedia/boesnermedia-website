@@ -73,17 +73,6 @@ collections:
                 fields:
                   - { label: Titel, name: titel, widget: string }
                   - { label: Text, name: text, widget: string }
-          - label: Ausgewähltes Projekt
-            name: projekt
-            widget: object
-            fields:
-              - { label: Kleine Zeile, name: eyebrow, widget: string }
-              - { label: Titel, name: titel, widget: string }
-              - { label: Titel (Magenta), name: titel_akzent, widget: string }
-              - { label: Aufgabe, name: aufgabe, widget: string }
-              - { label: Lösung, name: loesung, widget: string }
-              - { label: Ergebnis, name: ergebnis, widget: string }
-              - { label: Video, name: video, widget: file, required: false }
           - label: Prozess
             name: prozess
             widget: object
@@ -104,7 +93,7 @@ collections:
               - { label: Text, name: text, widget: text }
               - { label: Button, name: button, widget: string }
               - { label: Link, name: link, widget: string, required: false }
-          - label: Roots & Passion
+          - label: Sport-DNA
             name: roots
             widget: object
             fields:
@@ -119,6 +108,48 @@ collections:
               - { label: Überschrift, name: titel, widget: string }
               - { label: Text, name: text, widget: string }
               - { label: Porträt, name: bild, widget: image, required: false }
+      - name: projekte
+        label: Projekte
+        file: src/_data/projekte.json
+        format: json
+        fields:
+          - { label: Überschrift, name: titel, widget: string }
+          - { label: Einleitung, name: intro, widget: text }
+          - label: Projekte (das erste erscheint auch auf der Startseite)
+            name: liste
+            widget: list
+            fields:
+              - { label: Leistungsfeld, name: kategorie, widget: string }
+              - { label: Titel, name: titel, widget: string }
+              - { label: Titel (Magenta), name: titel_akzent, widget: string }
+              - { label: Aufgabe, name: aufgabe, widget: string }
+              - { label: Lösung, name: loesung, widget: string }
+              - { label: Ergebnis, name: ergebnis, widget: string }
+              - { label: Video, name: video, widget: file, required: false }
+              - { label: Bild, name: bild, widget: image, required: false }
+      - name: ueber
+        label: Über mich
+        file: src/_data/ueber.json
+        format: json
+        fields:
+          - { label: Kleine Zeile, name: eyebrow, widget: string }
+          - { label: Überschrift, name: titel, widget: string }
+          - { label: Überschrift (Magenta), name: titel_akzent, widget: string }
+          - { label: Text, name: text, widget: text }
+          - { label: Porträt, name: portrait, widget: image, required: false }
+          - { label: Zitat, name: vision, widget: text }
+          - { label: Sport – kleine Zeile, name: sport_eyebrow, widget: string }
+          - { label: Sport – Überschrift, name: sport_titel, widget: string }
+          - { label: Sport – Überschrift (Magenta), name: sport_titel_akzent, widget: string }
+          - { label: Sport – Text, name: sport_text, widget: text }
+          - { label: Sport – Bild, name: sport_bild, widget: image, required: false }
+          - { label: Überschrift Arbeitsweise, name: unterschiede_titel, widget: string }
+          - label: Was mich unterscheidet
+            name: unterschiede
+            widget: list
+            fields:
+              - { label: Titel, name: titel, widget: string }
+              - { label: Text, name: text, widget: string }
       - name: kontaktdaten
         label: Kontaktdaten
         file: src/_data/site.json
@@ -136,9 +167,9 @@ collections:
           - { label: Antwortzeit, name: antwortzeit, widget: string }
           - { label: Formular-Server (setzt Claude), name: anfrage_endpunkt, widget: hidden }
   - name: pakete
-    label: Paketseiten
-    label_singular: Paketseite
-    folder: src/loesungen
+    label: Leistungsseiten
+    label_singular: Leistungsseite
+    folder: src/leistungen
     extension: md
     format: frontmatter
     create: false
@@ -148,6 +179,7 @@ collections:
       - { label: Seitentitel (Google), name: title, widget: string }
       - { label: Beschreibung (Google), name: description, widget: text }
       - { label: Paketname, name: name, widget: string }
+      - { label: Leistungsfeld, name: feld, widget: string, required: false }
       - { label: Kurzname (für Buttons), name: kurzname, widget: string, required: false }
       - { label: Kleine Zeile oben, name: eyebrow, widget: string }
       - { label: Versprechen, name: claim, widget: string }
@@ -163,10 +195,12 @@ collections:
       - { label: Zielgruppe, name: zielgruppe, widget: string }
       - { label: Dauer bis zum fertigen Video, name: dauer, widget: string, required: false }
       - { label: Eigener Satz zur Dauer (ersetzt die Dauer), name: dauer_satz, widget: string, required: false }
+      - { label: Kleine Zeile Ablauf, name: ablauf_eyebrow, widget: string, required: false }
       - { label: Überschrift Ablauf, name: ablauf_titel, widget: string, required: false }
       - { label: Überschrift Abschluss, name: cta_titel, widget: string, required: false }
-      - { label: Überschrift Varianten, name: varianten_titel, widget: string, required: false }
-      - label: Varianten
+      - { label: Kleine Zeile Formate, name: varianten_eyebrow, widget: string, required: false }
+      - { label: Überschrift Formate, name: varianten_titel, widget: string, required: false }
+      - label: Formate
         name: varianten
         widget: list
         required: false

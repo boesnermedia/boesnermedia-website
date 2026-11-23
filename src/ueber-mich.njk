@@ -1,0 +1,63 @@
+---
+layout: base.njk
+permalink: /ueber-mich/
+title: "Über mich – Niklas Bösner, Videograf aus Winnenden"
+description: "Niklas Bösner, Videograf und Fotograf aus Winnenden: Sport-DNA aus dem Radsport, Technik-Verständnis und KI aus der Praxis – für Industrie- und Outdoor-Marken."
+---
+{% set u = ueber %}
+<section class="section dark" aria-labelledby="ueber-titel" style="padding-top: 96px">
+  <div class="wrap split">
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <span class="eyebrow">{{ u.eyebrow }}</span>
+      <h1 id="ueber-titel" class="h-paket">{{ u.titel }}<br><span class="brand">{{ u.titel_akzent }}</span></h1>
+      <p class="lead">{{ u.text }}</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="/kontakt/">Potenzial-Analyse buchen</a></div>
+    </div>
+    <div class="media-box" style="aspect-ratio: 4 / 5; max-height: 560px">
+      {% if u.portrait %}<img src="{{ u.portrait }}" alt="Porträt Niklas Bösner">{% else %}<span class="placeholder">[Porträt Niklas]</span>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section light" aria-label="Vision">
+  <div class="wrap" style="max-width: 980px">
+    <blockquote class="quote"><p>„{{ u.vision }}“</p></blockquote>
+  </div>
+</section>
+
+<section class="section deep dark" aria-labelledby="sport-titel">
+  <div class="wrap split">
+    <div class="media-box" style="aspect-ratio: 4 / 5; max-height: 520px">
+      {% if u.sport_bild %}<img src="{{ u.sport_bild }}" alt="Radsport-Fotografie von Niklas Bösner" loading="lazy">{% else %}<span class="placeholder">[Foto Radsport]</span>{% endif %}
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <span class="eyebrow">{{ u.sport_eyebrow }}</span>
+      <h2 id="sport-titel" class="h-l">{{ u.sport_titel }} <span class="brand">{{ u.sport_titel_akzent }}</span></h2>
+      <p class="lead" style="margin: 0">{{ u.sport_text }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section light" aria-labelledby="unterschied-titel">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Arbeitsweise</span>
+      <h2 id="unterschied-titel" class="h-display">{{ u.unterschiede_titel }}<span class="brand">.</span></h2>
+    </div>
+    <div class="numbers numbers-3">
+      {% for x in u.unterschiede %}<div><div class="step-n">{{ "0" if loop.index < 10 }}{{ loop.index }}</div><h3 style="font-size: 20px; line-height: 26px; margin-top: 8px">{{ x.titel }}</h3><p>{{ x.text }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="academy accent" aria-labelledby="cta-titel">
+  <div class="wrap">
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+      <span class="eyebrow plain" style="color: #fff">Nächster Schritt</span>
+      <h2 id="cta-titel" class="h-display">Lassen Sie uns kennenlernen.</h2>
+      <p style="margin: 0; font-size: 18px; line-height: 30px">Erzählen Sie mir in 15 Minuten, was Sie vorhaben. Kostenlos und unverbindlich.</p>
+      <p style="margin: 0; font-weight: 700">Antwort {{ site.antwortzeit }} – versprochen.</p>
+    </div>
+    <a class="btn btn-primary" href="/kontakt/">Potenzial-Analyse buchen</a>
+  </div>
+</section>

@@ -34,9 +34,9 @@ layout: base.njk
   </div>
   <div class="wrap">
     <div class="hero-text">
-      <nav aria-label="Brotkrumen" class="small muted"><a href="/" class="tap">Start</a> / <a href="/#loesungen" class="tap">Leistungen</a> / {{ name }}</nav>
+      <nav aria-label="Brotkrumen" class="small muted"><a href="/" class="tap">Start</a> / <a href="/#loesungen" class="tap">Leistungen</a> / {{ feld or name }}</nav>
       <span class="eyebrow">{{ eyebrow }}</span>
-      <h1 id="paket-titel" class="h-paket">{{ name }}<br><span class="brand">{{ claim }}</span></h1>
+      <h1 id="paket-titel" class="h-paket">{% if feld %}<span class="paket-name">{{ name }}</span>{{ feld }}{% else %}{{ name }}{% endif %}<br><span class="brand">{{ claim }}</span></h1>
       <p class="lead">{{ intro }}</p>
       <div class="hero-actions"><a class="btn btn-primary" href="{{ anfrage }}">{{ kurzname or name }} anfragen</a></div>
     </div>
@@ -60,7 +60,7 @@ layout: base.njk
 <section class="section dark" aria-labelledby="ablauf-titel">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Komplettbetreuung</span>
+      <span class="eyebrow">{{ ablauf_eyebrow or "Komplettbetreuung" }}</span>
       <h2 id="ablauf-titel" class="h-display">{{ ablauf_titel or "So entsteht Ihr Video" }}<span class="brand">.</span></h2>
       {% if dauer_satz %}<p class="lead" style="margin: 0">{{ dauer_satz }}</p>{% elif dauer and dauer[0] != "[" %}<p class="lead" style="margin: 0">Vom Briefing bis zum fertigen Video: <strong>{{ dauer }}</strong>.</p>{% endif %}
     </div>
@@ -82,7 +82,7 @@ layout: base.njk
 <section class="section light" aria-labelledby="varianten-titel">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Zwei Varianten</span>
+      <span class="eyebrow">{{ varianten_eyebrow or "Formate" }}</span>
       <h2 id="varianten-titel" class="h-display">{{ varianten_titel }}<span class="brand">.</span></h2>
     </div>
     <div class="other-pakete">
@@ -164,7 +164,7 @@ layout: base.njk
       <h2 id="weitere-titel" class="h-l">Weitere Leistungen<span class="brand">.</span></h2>
     </div>
     <div class="other-pakete">
-      {% for p in startseite.pakete.liste %}{% if p.name != name %}
+      {% for p in startseite.pakete.liste %}{% if p.name != name and not (p.link and p.link.indexOf("#") >= 0) %}
       <a class="other-paket" href="{{ p.link or ('/kontakt/?paket=' + (p.name | urlencode)) }}">
         <span class="eyebrow plain brand">{{ p.name }}</span>
         <strong>{{ p.feld }}</strong>

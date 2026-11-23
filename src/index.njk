@@ -4,6 +4,7 @@ title: "Bösner Media – Videoproduktion Winnenden für Industrie und Outdoor-M
 description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken aus Winnenden – Dokumentation, technische Erklärvideos, Social Media Content, Unternehmenskommunikation und KI-Workshops.
 ---
 {% set s = startseite %}
+{% set c = projekte.liste[0] %}
 
 <section class="hero dark" aria-labelledby="hero-titel">
   <div class="hero-visual">
@@ -59,7 +60,7 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
       </article>
       {% endif %}{% endfor %}
     </div>
-    <p style="margin: 32px 0 0"><a class="tap muted" href="#lab" style="text-decoration: none; font-size: 14px; font-weight: 500">Außerdem: KI-Workshops für Ihr Team →</a></p>
+    <p style="margin: 32px 0 0"><a class="tap muted" href="/ki-workshops/" style="text-decoration: none; font-size: 14px; font-weight: 500">Außerdem: KI-Workshops für Ihr Team →</a></p>
   </div>
 </section>
 
@@ -82,17 +83,18 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
   <div class="wrap split">
     <div class="skew" style="aspect-ratio: 16 / 10; margin: 0 24px">
       <div class="skew-media" style="inset: 16px 40px 16px 28px; background: var(--navy-700)">
-        {% if s.projekt.video %}<video src="{{ s.projekt.video }}" controls preload="none"></video>{% else %}<span class="placeholder" style="color: #fff">[Video-Ausschnitt]</span>{% endif %}
+        {% if c.video %}<video src="{{ c.video }}" controls preload="none"></video>{% else %}<span class="placeholder" style="color: #fff">[Video-Ausschnitt]</span>{% endif %}
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 18px">
-      <span class="eyebrow plain brand">{{ s.projekt.eyebrow }}</span>
-      <h2 id="projekt-titel" class="h-l">{{ s.projekt.titel }} <span class="brand">{{ s.projekt.titel_akzent }}</span></h2>
+      <span class="eyebrow plain brand">{{ "Case · " + c.kategorie }}</span>
+      <h2 id="projekt-titel" class="h-l">{{ c.titel }} <span class="brand">{{ c.titel_akzent }}</span></h2>
       <dl class="meta">
-        <div><dt>Aufgabe</dt><dd>{{ s.projekt.aufgabe }}</dd></div>
-        <div><dt>Lösung</dt><dd>{{ s.projekt.loesung }}</dd></div>
-        <div><dt>Ergebnis</dt><dd>{{ s.projekt.ergebnis }}</dd></div>
+        <div><dt>Aufgabe</dt><dd>{{ c.aufgabe }}</dd></div>
+        <div><dt>Lösung</dt><dd>{{ c.loesung }}</dd></div>
+        <div><dt>Ergebnis</dt><dd>{{ c.ergebnis }}</dd></div>
       </dl>
+      <a class="link" href="/projekte/">Alle Projekte</a>
     </div>
   </div>
 </section>
@@ -125,6 +127,7 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
     <div style="display: flex; flex-direction: column; gap: 20px">
       <span class="eyebrow">{{ s.roots.eyebrow }}</span>
       <h2 id="ueber-titel" class="h-l">{{ s.roots.titel }} <span class="brand">{{ s.roots.titel_akzent }}</span></h2>
+      <a class="link" href="/ueber-mich/" style="align-self: flex-start">Mehr über mich</a>
     </div>
     <div class="media-box" style="aspect-ratio: 4 / 5; max-height: 480px">
       {% if s.roots.bild %}<img src="{{ s.roots.bild }}" alt="Niklas Bösner beim Radsport" loading="lazy">{% else %}<span class="placeholder">[Foto Radsport]</span>{% endif %}

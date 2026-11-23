@@ -51,19 +51,10 @@
         "name": "THE LAB",
         "versprechen": "KI sinnvoll nutzen – ohne Hype.",
         "video": "",
-        "link": "/#lab",
+        "link": "/ki-workshops/",
         "nur_unterseiten": true
       }
     ]
-  },
-  "projekt": {
-    "eyebrow": "Case · Dokumentation & Kampagne",
-    "titel": "The New York Attempt.",
-    "titel_akzent": "Simplon × Alex Müller.",
-    "aufgabe": "[Ein Satz: Was wollte Simplon zeigen?]",
-    "loesung": "[Ein Satz: Wie wurde es umgesetzt?]",
-    "ergebnis": "[Ein Satz: Was ist entstanden – Film, Clips, Fotos?]",
-    "video": ""
   },
   "prozess": {
     "titel": "In fünf Schritten zum fertigen Video",
@@ -94,14 +85,15 @@
     "eyebrow": "KI-Enablement · THE LAB",
     "titel": "KI sinnvoll nutzen – ohne Hype.",
     "text": "Ich zeige Teams, wie sie KI im Content-Alltag einsetzen: von der Idee über Skript und Schnitt bis zu Untertiteln und Übersetzung. Aus der Praxis, mit Fokus auf datenschutzkonforme Tools aus der EU.",
-    "button": "Workshop anfragen",
-    "link": "/kontakt/?paket=THE%20LAB"
+    "button": "Mehr zu THE LAB",
+    "link": "/ki-workshops/"
   },
   "roots": {
     "eyebrow": "Sport-DNA",
     "titel": "Wer bei 50 km/h den Fokus hält,",
     "titel_akzent": "verliert ihn auch in der Fertigungshalle nicht.",
-    "bild": ""
+    "bild": "",
+    "link": "/ueber-mich/"
   },
   "kontakt": {
     "titel": "Jetzt loslegen",

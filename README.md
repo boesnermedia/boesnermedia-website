@@ -36,3 +36,9 @@ npm install
 npm start      # lokale Vorschau unter http://localhost:8080
 npm run build  # fertige Seite in _site/
 ```
+
+## Stand Strategie 2027
+- Startseite: Claim „Performance im Fokus.“, 5 Leistungsfelder, „Ein Dreh, alle Kanäle“, Case, THE LAB
+- Leistungsseiten (`src/leistungen/`, Vorlage `src/_includes/paket.njk`): /dokumentation, /erklaervideos, /social-media, /unternehmenskommunikation, /ki-workshops – ohne Preise
+- /ueber-mich (Inhalt `src/_data/ueber.json`), /projekte (Inhalt `src/_data/projekte.json`, erstes Projekt erscheint auf der Startseite)
+- SEO: Sitemap, robots.txt, strukturierte Daten (Firma, Leistung, FAQ)

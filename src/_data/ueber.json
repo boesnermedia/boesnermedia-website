@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Über mich",
+  "titel": "Niklas Bösner.",
+  "titel_akzent": "Ich mache Leistung sichtbar.",
+  "text": "Ich filme Menschen und Produkte, die etwas leisten. Ich komme aus dem Radsport und habe dort gelernt, Dynamik und Emotion einzufangen – und ich verstehe Technik. Deshalb mache ich für Industrie- und Outdoor-Marken Dokus, Erklärvideos und Social Content, die nicht nur gut aussehen, sondern verstanden werden.",
+  "portrait": "",
+  "vision": "Echte Hingabe verdient eine Bühne – egal ob im Wald, in der Werkhalle oder auf dem Bike.",
+  "sport_eyebrow": "Sport-DNA",
+  "sport_titel": "Vom Rennrad",
+  "sport_titel_akzent": "in die Werkhalle.",
+  "sport_text": "Für mich gibt es keinen Unterschied zwischen dem Athleten im Trikot und dem Experten im Blaumann. Beide geben alles. Ich übertrage die Energie der Sportdokumentation in Industrie und Marken – mit Filmen, die verstanden werden, Content, der funktioniert, und KI-Know-how, das Teams im Alltag weiterbringt.",
+  "sport_bild": "",
+  "unterschiede_titel": "Was mich unterscheidet",
+  "unterschiede": [
+    { "titel": "Technik-Verständnis", "text": "Ich stelle beim Dreh die richtigen Fragen und erkläre Technik so, dass sie verstanden wird." },
+    { "titel": "Sport-DNA", "text": "Dynamik, Emotion und Action aus dem Radsport – auch in der Werkhalle." },
+    { "titel": "One-Man-Squad", "text": "Schnell, flexibel, diskret und mit wenig Störung im laufenden Betrieb. Bei Bedarf mit Partnern." },
+    { "titel": "Ein Dreh, alle Kanäle", "text": "Aus einer Produktion entstehen Film, Social-Clips und Fotos." },
+    { "titel": "KI aus der Praxis", "text": "Ich nutze KI selbst täglich im Workflow – keine Theorie, kein Hype." },
+    { "titel": "Diskretion", "text": "Vertrauliche Industrie-Projekte bleiben vertraulich." }
+  ]
+}
