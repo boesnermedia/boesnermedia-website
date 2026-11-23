@@ -9,7 +9,8 @@ kurzname: Explainer
 eyebrow: "Technische Erklärvideos · Industrie, Hersteller, Schulung"
 claim: "Komplexe Technik, sofort verstanden."
 intro: "Ich verstehe Technik und stelle beim Dreh die richtigen Fragen. Daraus entstehen Videos, die Ihren Vertrieb beschleunigen, Händler und Mitarbeiter schulen und Ihren Support entlasten."
-video: ""
+video: "/assets/uploads/explainer-fs44.mp4"
+video_poster: "/assets/uploads/explainer-fs44-poster.jpg"
 ziel_titel: "Wofür Unternehmen den Explainer einsetzen"
 ziele:
   - titel: Vertrieb beschleunigen

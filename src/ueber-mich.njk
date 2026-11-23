@@ -14,7 +14,7 @@ description: "Niklas Bösner, Videograf und Fotograf aus Winnenden: Sport-DNA au
       <div class="hero-actions"><a class="btn btn-primary" href="/kontakt/">Potenzial-Analyse buchen</a></div>
     </div>
     <div class="media-box" style="aspect-ratio: 4 / 5; max-height: 560px">
-      {% if u.portrait %}<img src="{{ u.portrait }}" alt="Porträt Niklas Bösner">{% else %}<span class="placeholder">[Porträt Niklas]</span>{% endif %}
+      {% if u.portrait %}<img src="{{ u.portrait }}" alt="Porträt Niklas Bösner" style="object-position: center 20%">{% else %}<span class="placeholder">[Porträt Niklas]</span>{% endif %}
     </div>
   </div>
 </section>
@@ -28,7 +28,7 @@ description: "Niklas Bösner, Videograf und Fotograf aus Winnenden: Sport-DNA au
 <section class="section deep dark" aria-labelledby="sport-titel">
   <div class="wrap split">
     <div class="media-box" style="aspect-ratio: 4 / 5; max-height: 520px">
-      {% if u.sport_bild %}<img src="{{ u.sport_bild }}" alt="Radsport-Fotografie von Niklas Bösner" loading="lazy">{% else %}<span class="placeholder">[Foto Radsport]</span>{% endif %}
+      {% if u.sport_bild %}<img src="{{ u.sport_bild }}" alt="Radsport-Fotografie von Niklas Bösner" loading="lazy" style="object-position: 25% center">{% else %}<span class="placeholder">[Foto Radsport]</span>{% endif %}
     </div>
     <div style="display: flex; flex-direction: column; gap: 20px">
       <span class="eyebrow">{{ u.sport_eyebrow }}</span>

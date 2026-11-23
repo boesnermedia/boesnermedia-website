@@ -28,7 +28,7 @@ layout: base.njk
   <div class="hero-visual">
     <div class="skew" style="height: 100%">
       <div class="skew-media">
-        {% if video %}<video src="{{ video }}" controls preload="none" aria-label="Beispielvideo {{ name }}"></video>{% else %}<span class="placeholder">[Beispielvideo {{ name }}]</span>{% endif %}
+        {% if video %}<button type="button" class="hero-play" data-reel-open aria-label="Beispielvideo {{ feld or name }} abspielen">{% if video_poster %}<img src="{{ video_poster }}" alt="">{% endif %}<span class="hero-play-icon" aria-hidden="true">▶</span></button>{% elif bild %}<img src="{{ bild }}" alt="{{ feld or name }} – Beispielbild" fetchpriority="high">{% else %}<span class="placeholder">[Beispielvideo {{ name }}]</span>{% endif %}
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@ layout: base.njk
       <span class="eyebrow">{% if feld %}{{ name }}{% else %}{{ eyebrow }}{% endif %}</span>
       <h1 id="paket-titel" class="h-paket">{{ feld or name }}<span class="brand claim">{{ claim }}</span></h1>
       <p class="lead">{{ intro }}</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="{{ anfrage }}">{{ kurzname or name }} anfragen</a></div>
+      <div class="hero-actions"><a class="btn btn-primary" href="{{ anfrage }}">{{ kurzname or name }} anfragen</a>{% if video %}<button type="button" class="btn btn-secondary" data-reel-open>▶ Beispiel ansehen</button>{% endif %}</div>
     </div>
   </div>
 </section>
@@ -176,3 +176,12 @@ layout: base.njk
     </div>
   </div>
 </section>
+
+{% if video %}
+<div class="reel" id="reel" role="dialog" aria-modal="true" aria-label="Beispielvideo {{ feld or name }}" hidden>
+  <div class="reel-inner" style="display: flex; flex-direction: column; gap: 16px">
+    <button type="button" class="btn btn-secondary reel-close dark" style="background: none" data-reel-close>✕ Schließen</button>
+    <div class="reel-player"><video src="{{ video }}" {% if video_poster %}poster="{{ video_poster }}"{% endif %} controls playsinline preload="none" style="width: 100%; height: 100%"></video></div>
+  </div>
+</div>
+{% endif %}

@@ -12,6 +12,8 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
       <div class="skew-media">
         {% if s.hero.loop_video %}
         <video id="loop" src="{{ s.hero.loop_video }}" {% if s.hero.loop_bild %}poster="{{ s.hero.loop_bild }}"{% endif %} muted loop playsinline preload="metadata" aria-label="Kurzer Ausschnitt aus dem Showreel, ohne Ton"></video>
+        {% elif s.hero.loop_bild %}
+        <img src="{{ s.hero.loop_bild }}" alt="Radrennen: Fahrer im Mitzieher fotografiert von Niklas Bösner" fetchpriority="high">
         {% else %}
         <span class="placeholder">[Showreel-Loop, 20 Sek., ohne Ton]</span>
         {% endif %}
@@ -51,7 +53,7 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
       {% for p in s.pakete.liste %}{% if not p.nur_unterseiten %}
       <article class="card">
         <div class="card-media">
-          {% if p.video %}<video src="{{ p.video }}" muted loop playsinline preload="none" aria-hidden="true"></video>{% else %}<span class="placeholder">[Vorschau 5 Sek.]</span>{% endif %}
+          {% if p.video %}<video src="{{ p.video }}" {% if p.bild %}poster="{{ p.bild }}"{% endif %} muted loop playsinline preload="none" aria-hidden="true"></video>{% elif p.bild %}<img src="{{ p.bild }}" alt="" loading="lazy">{% else %}<span class="placeholder">[Vorschau 5 Sek.]</span>{% endif %}
         </div>
         <span class="eyebrow plain">{{ p.name }}</span>
         <h3 class="h-package" style="text-transform: none; letter-spacing: 0">{{ p.feld }}</h3>
@@ -138,7 +140,7 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
 <section class="section light" aria-labelledby="kontakt-titel">
   <div class="wrap split">
     <div class="media-box" style="aspect-ratio: 1; max-height: 420px">
-      {% if s.kontakt.bild %}<img src="{{ s.kontakt.bild }}" alt="Porträt Niklas Bösner" loading="lazy">{% else %}<span class="placeholder" style="color: var(--navy-500)">[Porträt Niklas]</span>{% endif %}
+      {% if s.kontakt.bild %}<img src="{{ s.kontakt.bild }}" alt="Porträt Niklas Bösner" loading="lazy" style="object-position: center 20%">{% else %}<span class="placeholder" style="color: var(--navy-500)">[Porträt Niklas]</span>{% endif %}
     </div>
     <div style="display: flex; flex-direction: column; gap: 18px">
       <span class="eyebrow">Kontakt</span>

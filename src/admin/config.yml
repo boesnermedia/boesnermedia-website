@@ -57,6 +57,7 @@ collections:
                   - { label: Paketname, name: name, widget: string }
                   - { label: Versprechen, name: versprechen, widget: string }
                   - { label: Vorschauvideo (5 Sek.), name: video, widget: file, required: false }
+                  - { label: Vorschaubild (wenn kein Video), name: bild, widget: image, required: false }
                   - { label: Link zur Paketseite, name: link, widget: string, required: false }
                   - { label: Nicht als Karte zeigen, name: nur_unterseiten, widget: boolean, required: false }
           - label: Ein Dreh, alle Kanäle
@@ -185,6 +186,8 @@ collections:
       - { label: Versprechen, name: claim, widget: string }
       - { label: Einleitung, name: intro, widget: text }
       - { label: Beispielvideo, name: video, widget: file, required: false }
+      - { label: Vorschaubild zum Video, name: video_poster, widget: image, required: false }
+      - { label: Bild (wenn kein Video), name: bild, widget: image, required: false }
       - { label: Überschrift Ziele, name: ziel_titel, widget: string }
       - label: Ziele
         name: ziele

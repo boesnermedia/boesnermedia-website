@@ -6,7 +6,7 @@
     "text": "Video, Content und KI-Know-how für Industrie- und Outdoor-Marken, die echte Leistung zeigen – von der Werkbank über den Forst bis aufs Bike.",
     "button": "Potenzial-Analyse buchen",
     "loop_video": "",
-    "loop_bild": "",
+    "loop_bild": "/assets/uploads/radsport-wangen-feld.jpg",
     "showreel_video": ""
   },
   "kunden": {
@@ -23,14 +23,16 @@
         "name": "THE MOMENTUM",
         "versprechen": "Geschichten mit Puls.",
         "video": "",
-        "link": "/dokumentation/"
+        "link": "/dokumentation/",
+        "bild": "/assets/uploads/radsport-wangen-fokus.jpg"
       },
       {
         "feld": "Technische Erklärvideos",
         "name": "THE EXPLAINER",
         "versprechen": "Komplexe Technik, sofort verstanden.",
-        "video": "",
-        "link": "/erklaervideos/"
+        "video": "/assets/uploads/explainer-vorschau.mp4",
+        "link": "/erklaervideos/",
+        "bild": "/assets/uploads/explainer-fs44-poster.jpg"
       },
       {
         "feld": "Social Media Content",
@@ -92,13 +94,13 @@
     "eyebrow": "Sport-DNA",
     "titel": "Wer bei 50 km/h den Fokus hält,",
     "titel_akzent": "verliert ihn auch in der Fertigungshalle nicht.",
-    "bild": "",
+    "bild": "/assets/uploads/radsport-wangen-hochkant.jpg",
     "link": "/ueber-mich/"
   },
   "kontakt": {
     "titel": "Jetzt loslegen",
     "text": "Erzählen Sie mir in 15 Minuten, was Sie vorhaben. Kostenlos und unverbindlich.",
-    "bild": ""
+    "bild": "/assets/uploads/portrait-niklas.jpg"
   },
   "leitprinzip": {
     "eyebrow": "Das Prinzip",
