@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "eyebrow": "Videoproduktion · Rems-Murr · Stuttgart",
+    "titel": "Performance",
+    "titel_akzent": "im Fokus.",
+    "text": "Wir machen echte Leistung sichtbar. Videos für Industrie, Handel und Sport, produziert in Winnenden.",
+    "button": "Potenzial-Analyse buchen",
+    "loop_video": "",
+    "loop_bild": "",
+    "showreel_video": ""
+  },
+  "kunden": {
+    "zeile": "Für diese Unternehmen im Einsatz.",
+    "logos": []
+  },
+  "pakete": {
+    "eyebrow": "Die Pakete",
+    "titel": "Drei Wege zu Bewegtbild,",
+    "titel_akzent": "das wirkt.",
+    "liste": [
+      { "name": "THE EXPLAINER", "zielgruppe": "Hidden Champions", "versprechen": "Komplexe Technik in unter 180 Sek. verstehen.", "video": "" },
+      { "name": "THE CONTENT SPRINT", "zielgruppe": "Local Heroes", "versprechen": "Ein Monat Content an einem Vormittag.", "video": "" },
+      { "name": "THE MOMENTUM", "zielgruppe": "Events & Brands", "versprechen": "Echte Emotionen im Doku-Style.", "video": "" }
+    ],
+    "link_text": "Alle Lösungen inkl. THE PODCAST und THE LIVE PRODUCTION"
+  },
+  "zahlen": [
+    { "wert": "180", "einheit": "Sek.", "text": "So lang braucht ein Explainer für komplexe Technik." },
+    { "wert": "1", "einheit": "Vormittag", "text": "Drehzeit für einen Monat Social-Media-Content." },
+    { "wert": "[ZAHL]", "einheit": "", "text": "[Projekte, Kunden oder Jahre – echte Kennzahl folgt.]" }
+  ],
+  "projekt": {
+    "eyebrow": "Projekt · The Podcast",
+    "titel": "Stihl Voices.",
+    "titel_akzent": "Technik, die man hören kann.",
+    "aufgabe": "[Ein Satz nach Freigabe]",
+    "loesung": "[Ein Satz nach Freigabe]",
+    "ergebnis": "[Ein Satz nach Freigabe]",
+    "video": ""
+  },
+  "prozess": {
+    "titel": "In fünf Schritten zum fertigen Video",
+    "schritte": [
+      { "name": "Konzept", "text": "Ziel, Story, Drehplan." },
+      { "name": "Produktion", "text": "Dreh vor Ort." },
+      { "name": "Post", "text": "Schnitt, Grading, Ton." },
+      { "name": "Feedback", "text": "Zwei Korrekturschleifen." },
+      { "name": "Release", "text": "Export für alle Kanäle." }
+    ]
+  },
+  "academy": {
+    "eyebrow": "Academy & Consulting",
+    "titel": "Sie wollen es selbst machen?",
+    "text": "Ich zeige Ihrem Team, wie gute Videos mit Smartphone und Bordmitteln entstehen. Als Workshop vor Ort oder als Coaching.",
+    "button": "Workshop anfragen"
+  },
+  "roots": {
+    "eyebrow": "Roots & Passion",
+    "titel": "Wer bei 50 km/h den Fokus hält,",
+    "titel_akzent": "verliert ihn auch in der Fertigungshalle nicht.",
+    "bild": ""
+  },
+  "kontakt": {
+    "titel": "Jetzt loslegen",
+    "text": "Erzählen Sie mir in 15 Minuten, was Sie vorhaben. Kostenlos und unverbindlich.",
+    "bild": ""
+  }
+}

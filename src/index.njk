@@ -1,0 +1,158 @@
+---
+layout: base.njk
+title: Bösner Media
+description: Videoproduktion für Industrie, Handel und Sport aus Winnenden – Rems-Murr-Kreis und Region Stuttgart. Explainer, Social-Media-Content, Doku und Podcast.
+---
+{% set s = startseite %}
+
+<section class="hero dark" aria-labelledby="hero-titel">
+  <div class="hero-visual">
+    <div class="skew" style="height: 100%">
+      <div class="skew-media">
+        {% if s.hero.loop_video %}
+        <video id="loop" src="{{ s.hero.loop_video }}" {% if s.hero.loop_bild %}poster="{{ s.hero.loop_bild }}"{% endif %} muted loop playsinline preload="metadata" aria-label="Kurzer Ausschnitt aus dem Showreel, ohne Ton"></video>
+        {% else %}
+        <span class="placeholder">[Showreel-Loop, 20 Sek., ohne Ton]</span>
+        {% endif %}
+      </div>
+      {% if s.hero.loop_video %}<button type="button" class="loop-btn tap" data-loop-toggle aria-pressed="false">Loop pausieren</button>{% endif %}
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="eyebrow">{{ s.hero.eyebrow }}</span>
+      <h1 id="hero-titel" class="h-xl">{{ s.hero.titel }}<br><span class="brand">{{ s.hero.titel_akzent }}</span></h1>
+      <p class="lead">{{ s.hero.text }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/kontakt/">{{ s.hero.button }}</a>
+        <button type="button" class="btn btn-secondary" data-reel-open>▶ Showreel ansehen</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clients deep dark" aria-label="Kunden">
+  <div class="wrap">
+    <span class="small muted">{{ s.kunden.zeile }}</span>
+    <div class="clients-logos">
+      {% for logo in s.kunden.logos %}<img src="{{ logo.bild }}" alt="{{ logo.name }}" loading="lazy">{% else %}<span class="placeholder" style="padding: 0">[Kundenlogos nach Freigabe]</span>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="loesungen" class="section dark" aria-labelledby="pakete-titel">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">{{ s.pakete.eyebrow }}</span>
+      <h2 id="pakete-titel" class="h-display">{{ s.pakete.titel }} <span class="brand">{{ s.pakete.titel_akzent }}</span></h2>
+    </div>
+    <div class="cards">
+      {% for p in s.pakete.liste %}
+      <article class="card">
+        <div class="card-media">
+          {% if p.video %}<video src="{{ p.video }}" muted loop playsinline preload="none" aria-hidden="true"></video>{% else %}<span class="placeholder">[Vorschau 5 Sek.]</span>{% endif %}
+        </div>
+        <span class="eyebrow plain">{{ p.zielgruppe }}</span>
+        <h3 class="h-package">{{ p.name }}</h3>
+        <p>{{ p.versprechen }}</p>
+        <a class="link" href="/kontakt/" aria-label="{{ p.name }} anfragen">Anfragen</a>
+      </article>
+      {% endfor %}
+    </div>
+    <p style="margin: 32px 0 0"><a class="tap muted" href="/kontakt/" style="text-decoration: none; font-size: 14px; font-weight: 500">{{ s.pakete.link_text }} →</a></p>
+  </div>
+</section>
+
+<section class="section light" aria-label="Kennzahlen" style="padding: 80px 0">
+  <div class="wrap">
+    <div class="numbers">
+      {% for z in s.zahlen %}
+      <div>
+        <div class="number"><span class="number-value">{{ z.wert }}</span>{% if z.einheit %}<span class="number-unit">{{ z.einheit }}</span>{% endif %}</div>
+        <p>{{ z.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="projekte" class="section deep dark" aria-labelledby="projekt-titel">
+  <div class="wrap split">
+    <div class="skew" style="aspect-ratio: 16 / 10; margin: 0 24px">
+      <div class="skew-media" style="inset: 16px 40px 16px 28px; background: var(--navy-700)">
+        {% if s.projekt.video %}<video src="{{ s.projekt.video }}" controls preload="none"></video>{% else %}<span class="placeholder" style="color: #fff">[Video-Ausschnitt]</span>{% endif %}
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px">
+      <span class="eyebrow plain brand">{{ s.projekt.eyebrow }}</span>
+      <h2 id="projekt-titel" class="h-l">{{ s.projekt.titel }} <span class="brand">{{ s.projekt.titel_akzent }}</span></h2>
+      <dl class="meta">
+        <div><dt>Aufgabe</dt><dd>{{ s.projekt.aufgabe }}</dd></div>
+        <div><dt>Lösung</dt><dd>{{ s.projekt.loesung }}</dd></div>
+        <div><dt>Ergebnis</dt><dd>{{ s.projekt.ergebnis }}</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section light" aria-labelledby="prozess-titel">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+    <div class="pager"><span>Der Prozess</span><span>{{ s.prozess.schritte | length }} Schritte</span></div>
+    <h2 id="prozess-titel" class="h-display" style="max-width: 760px">{{ s.prozess.titel }}<span class="brand">.</span></h2>
+    <ol class="steps">
+      {% for st in s.prozess.schritte %}
+      <li><div class="step-n">{{ "0" if loop.index < 10 }}{{ loop.index }}</div><div class="step-t">{{ st.name }}</div><div class="step-d">{{ st.text }}</div></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section id="academy" class="academy accent" aria-labelledby="academy-titel">
+  <div class="wrap">
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+      <span class="eyebrow plain" style="color: #fff">{{ s.academy.eyebrow }}</span>
+      <h2 id="academy-titel" class="h-display">{{ s.academy.titel }}</h2>
+      <p style="margin: 0; font-size: 18px; line-height: 30px">{{ s.academy.text }}</p>
+    </div>
+    <a class="btn btn-primary" href="/kontakt/">{{ s.academy.button }}</a>
+  </div>
+</section>
+
+<section id="ueber" class="section dark" aria-labelledby="ueber-titel">
+  <div class="wrap split">
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <span class="eyebrow">{{ s.roots.eyebrow }}</span>
+      <h2 id="ueber-titel" class="h-l">{{ s.roots.titel }} <span class="brand">{{ s.roots.titel_akzent }}</span></h2>
+    </div>
+    <div class="media-box" style="aspect-ratio: 4 / 5; max-height: 480px">
+      {% if s.roots.bild %}<img src="{{ s.roots.bild }}" alt="Niklas Bösner beim Radsport" loading="lazy">{% else %}<span class="placeholder">[Foto Radsport]</span>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section light" aria-labelledby="kontakt-titel">
+  <div class="wrap split">
+    <div class="media-box" style="aspect-ratio: 1; max-height: 420px">
+      {% if s.kontakt.bild %}<img src="{{ s.kontakt.bild }}" alt="Porträt Niklas Bösner" loading="lazy">{% else %}<span class="placeholder" style="color: var(--navy-500)">[Porträt Niklas]</span>{% endif %}
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px">
+      <span class="eyebrow">Kontakt</span>
+      <h2 id="kontakt-titel" class="h-display">{{ s.kontakt.titel }}<span class="brand">.</span></h2>
+      <p class="lead">{{ s.kontakt.text }}</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; margin-top: 8px">
+        <a class="btn btn-primary" href="/kontakt/">Potenzial-Analyse buchen</a>
+        <a class="link" style="text-transform: none; letter-spacing: 0; font-size: 14px" href="tel:{{ site.telefon_link }}">{{ site.telefon }}</a>
+        <a class="link" style="text-transform: none; letter-spacing: 0; font-size: 14px" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="reel" id="reel" role="dialog" aria-modal="true" aria-label="Showreel" hidden>
+  <div class="reel-inner" style="display: flex; flex-direction: column; gap: 16px">
+    <button type="button" class="btn btn-secondary reel-close dark" style="background: none" data-reel-close>✕ Schließen</button>
+    <div class="reel-player">
+      {% if s.hero.showreel_video %}<video src="{{ s.hero.showreel_video }}" controls preload="none" style="width: 100%; height: 100%"></video>{% else %}<span class="placeholder">[Showreel 60–90 Sek. mit Ton und Untertiteln]</span>{% endif %}
+    </div>
+  </div>
+</div>

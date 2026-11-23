@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}{% if title != site.name %} · {{ site.name }}{% endif %}</title>
+<meta name="description" content="{{ description or site.beschreibung }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="icon" href="/assets/img/mark.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0e1c32">
+<link rel="preload" href="/assets/fonts/montserrat-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/main.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ site.name }}",
+  "url": "{{ site.url }}",
+  "telephone": "{{ site.telefon }}",
+  "email": "{{ site.email }}",
+  "address": { "@type": "PostalAddress", "streetAddress": "{{ site.strasse }}", "postalCode": "71364", "addressLocality": "Winnenden", "addressCountry": "DE" },
+  "areaServed": ["Rems-Murr-Kreis", "Region Stuttgart"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="header dark">
+  <div class="wrap">
+    <a href="/" class="logo tap" aria-label="{{ site.name }} – zur Startseite"><img src="/assets/img/logo.svg" alt="{{ site.name }}" width="180" height="28"></a>
+    <button type="button" class="menu-btn tap" aria-expanded="false" aria-controls="hauptnav">Menü</button>
+    <nav id="hauptnav" class="nav" aria-label="Hauptnavigation">
+      <a class="tap" href="/#loesungen">Lösungen</a>
+      <a class="tap" href="/#projekte">Projekte</a>
+      <a class="tap" href="/#academy">Academy</a>
+      <a class="tap" href="/#ueber">Über mich</a>
+      <a class="tap" href="/kontakt/"{% if page.url == "/kontakt/" %} aria-current="page"{% endif %}>Kontakt</a>
+      {% if page.url != "/kontakt/" %}<a class="btn btn-primary" href="/kontakt/">Potenzial-Analyse buchen</a>{% endif %}
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+{{ content | safe }}
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <img src="/assets/img/logo.svg" alt="{{ site.name }}" width="155" height="24" style="height: 24px; width: auto">
+        <p class="small" style="margin: 12px 0 0">{{ site.strasse }} · {{ site.ort }}<br><a class="tap" href="tel:{{ site.telefon_link }}">{{ site.telefon }}</a> · <a class="tap" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+      <nav aria-label="Fußzeile">
+        <a class="tap" href="/#loesungen">Lösungen</a>
+        <a class="tap" href="/#projekte">Projekte</a>
+        <a class="tap" href="/#academy">Academy</a>
+        <a class="tap" href="/#ueber">Über mich</a>
+        <a class="tap" href="/kontakt/">Kontakt</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© {{ "" | jahr }} {{ site.name }} · {{ site.inhaber }}</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 0 20px"><a class="tap" href="/impressum/">Impressum</a><a class="tap" href="/datenschutz/">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+{% if page.url != "/kontakt/" %}
+<div class="mobile-bar dark" style="background: none">
+  <a class="btn btn-primary" href="/kontakt/">Potenzial-Analyse buchen</a>
+</div>
+{% endif %}
+
+<script src="/assets/js/main.js" defer></script>
+{% if scripts %}{% for s in scripts %}<script src="{{ s }}" defer></script>{% endfor %}{% endif %}
+</body>
+</html>

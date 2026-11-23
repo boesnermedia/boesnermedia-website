@@ -1,0 +1,147 @@
+# Inhalte bearbeiten unter boesnermedia.de/admin
+# Anmeldung mit GitHub. Jede Änderung wird als Version im GitHub-Projekt gespeichert.
+backend:
+  name: github
+  repo: boesnermedia/boesnermedia-website
+  branch: main
+
+locale: de
+media_folder: src/assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: seiten
+    label: Seiten
+    files:
+      - name: startseite
+        label: Startseite
+        file: src/_data/startseite.json
+        format: json
+        fields:
+          - label: Hero (ganz oben)
+            name: hero
+            widget: object
+            fields:
+              - { label: Kleine Zeile oben, name: eyebrow, widget: string }
+              - { label: Überschrift Zeile 1, name: titel, widget: string }
+              - { label: Überschrift Zeile 2 (Magenta), name: titel_akzent, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Button, name: button, widget: string }
+              - { label: Loop-Video (kurz, ohne Ton), name: loop_video, widget: file, required: false }
+              - { label: Standbild zum Loop, name: loop_bild, widget: image, required: false }
+              - { label: Showreel (lang, mit Ton), name: showreel_video, widget: file, required: false }
+          - label: Kunden
+            name: kunden
+            widget: object
+            fields:
+              - { label: Zeile, name: zeile, widget: string }
+              - label: Logos (nur mit Freigabe)
+                name: logos
+                widget: list
+                required: false
+                fields:
+                  - { label: Firmenname, name: name, widget: string }
+                  - { label: Logo, name: bild, widget: image }
+          - label: Pakete
+            name: pakete
+            widget: object
+            fields:
+              - { label: Kleine Zeile, name: eyebrow, widget: string }
+              - { label: Überschrift, name: titel, widget: string }
+              - { label: Überschrift (Magenta), name: titel_akzent, widget: string }
+              - label: Pakete
+                name: liste
+                widget: list
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Zielgruppe, name: zielgruppe, widget: string }
+                  - { label: Versprechen, name: versprechen, widget: string }
+                  - { label: Vorschauvideo (5 Sek.), name: video, widget: file, required: false }
+              - { label: Linktext unter den Paketen, name: link_text, widget: string }
+          - label: Zahlen
+            name: zahlen
+            widget: list
+            fields:
+              - { label: Zahl, name: wert, widget: string }
+              - { label: Einheit, name: einheit, widget: string, required: false }
+              - { label: Text, name: text, widget: string }
+          - label: Ausgewähltes Projekt
+            name: projekt
+            widget: object
+            fields:
+              - { label: Kleine Zeile, name: eyebrow, widget: string }
+              - { label: Titel, name: titel, widget: string }
+              - { label: Titel (Magenta), name: titel_akzent, widget: string }
+              - { label: Aufgabe, name: aufgabe, widget: string }
+              - { label: Lösung, name: loesung, widget: string }
+              - { label: Ergebnis, name: ergebnis, widget: string }
+              - { label: Video, name: video, widget: file, required: false }
+          - label: Prozess
+            name: prozess
+            widget: object
+            fields:
+              - { label: Überschrift, name: titel, widget: string }
+              - label: Schritte
+                name: schritte
+                widget: list
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Text, name: text, widget: string }
+          - label: Academy
+            name: academy
+            widget: object
+            fields:
+              - { label: Kleine Zeile, name: eyebrow, widget: string }
+              - { label: Überschrift, name: titel, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Button, name: button, widget: string }
+          - label: Roots & Passion
+            name: roots
+            widget: object
+            fields:
+              - { label: Kleine Zeile, name: eyebrow, widget: string }
+              - { label: Überschrift, name: titel, widget: string }
+              - { label: Überschrift (Magenta), name: titel_akzent, widget: string }
+              - { label: Foto, name: bild, widget: image, required: false }
+          - label: Kontakt-Abschluss
+            name: kontakt
+            widget: object
+            fields:
+              - { label: Überschrift, name: titel, widget: string }
+              - { label: Text, name: text, widget: string }
+              - { label: Porträt, name: bild, widget: image, required: false }
+      - name: kontaktdaten
+        label: Kontaktdaten
+        file: src/_data/site.json
+        format: json
+        fields:
+          - { label: Firmenname, name: name, widget: string }
+          - { label: Inhaber, name: inhaber, widget: string }
+          - { label: Website, name: url, widget: string }
+          - { label: Beschreibung für Google, name: beschreibung, widget: text }
+          - { label: Straße, name: strasse, widget: string }
+          - { label: PLZ und Ort, name: ort, widget: string }
+          - { label: Telefon (Anzeige), name: telefon, widget: string }
+          - { label: Telefon (Link, ohne Leerzeichen), name: telefon_link, widget: string }
+          - { label: E-Mail, name: email, widget: string }
+          - { label: Antwortzeit, name: antwortzeit, widget: string }
+          - { label: Formular-Server (setzt Claude), name: anfrage_endpunkt, widget: hidden }
+  - name: rechtliches
+    label: Impressum & Datenschutz
+    files:
+      - name: impressum
+        label: Impressum
+        file: src/impressum.md
+        fields:
+          - { label: Layout, name: layout, widget: hidden }
+          - { label: Titel, name: title, widget: string }
+          - { label: Adresse, name: permalink, widget: hidden }
+          - { label: Text, name: body, widget: markdown }
+      - name: datenschutz
+        label: Datenschutz
+        file: src/datenschutz.md
+        fields:
+          - { label: Layout, name: layout, widget: hidden }
+          - { label: Titel, name: title, widget: string }
+          - { label: Adresse, name: permalink, widget: hidden }
+          - { label: Text, name: body, widget: markdown }
