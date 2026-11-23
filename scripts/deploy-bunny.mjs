@@ -77,7 +77,7 @@ if (apiKey && pullZoneId) {
       const pfad = w.von.replace(/\/$/, "");
       const regel = {
         ActionType: 1, // Weiterleitung
-        ActionParameter1: `https://{{hostname}}${w.nach}`, // gleiche Domain, neue Seite
+        ActionParameter1: `https://%{Url.Hostname}${w.nach}`, // gleiche Domain, neue Seite
         ActionParameter2: "301",
         TriggerMatchingType: 0, // eine Bedingung reicht
         Triggers: [{ Type: 0, PatternMatches: [`*://*${pfad}`, `*://*${pfad}/`], PatternMatchingType: 0, Parameter1: "" }],
