@@ -154,6 +154,7 @@ collections:
           - { label: Text, name: text, widget: string }
       - { label: Zielgruppe, name: zielgruppe, widget: string }
       - { label: Dauer bis zum fertigen Video, name: dauer, widget: string, required: false }
+      - { label: Eigener Satz zur Dauer (ersetzt die Dauer), name: dauer_satz, widget: string, required: false }
       - { label: Überschrift Ablauf, name: ablauf_titel, widget: string, required: false }
       - { label: Überschrift Abschluss, name: cta_titel, widget: string, required: false }
       - { label: Überschrift Varianten, name: varianten_titel, widget: string, required: false }

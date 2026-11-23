@@ -18,7 +18,7 @@ ziele:
   - titel: Persönlich werden
     text: "Kunden sehen, wer hinter Ihrem Unternehmen steht – und fassen Vertrauen."
 zielgruppe: "Handel, Handwerk, Personal Brands und HR-Abteilungen"
-dauer: "[Dauer folgt]"
+dauer_satz: "Ihre fertigen Videos bekommen Sie auf Wunsch innerhalb einer Woche nach dem Dreh."
 ablauf_titel: "So entstehen Ihre Videos"
 cta_titel: "Lassen Sie uns über Ihre Videos sprechen."
 phasen:
@@ -26,7 +26,7 @@ phasen:
     untertitel: Strategie
     leistungen:
       - name: Themen & Skripte
-        text: "Fünf Skripte mit starkem Einstieg, damit Zuschauer nicht weiterwischen."
+        text: "Ich schreibe fünf Skripte mit starkem Einstieg – oder prüfe Ihre eigenen auf Social-Media-Tauglichkeit."
       - name: Drehplan
         text: "Eine Shot-List, die aus vier Stunden möglichst viel Material holt."
   - titel: Production
@@ -51,7 +51,7 @@ aufwand:
   - titel: "Kurzes Briefing"
     text: "Wir legen Ziele, Themen und Kanäle für die fünf Reels fest."
   - titel: "Skripte freigeben"
-    text: "Sie lesen die Skripte und geben sie frei oder sagen, was fehlt."
+    text: "Sie geben meine Skripte frei – oder liefern eigene, die ich vorher prüfe."
   - titel: "Ein Vormittag Zeit"
     text: "Vier Stunden Dreh bei Ihnen, mit den Personen, die vor die Kamera sollen."
   - titel: "Gebündeltes Feedback"
@@ -61,6 +61,7 @@ inklusive:
   - "Ein halber Drehtag (4 Stunden) bei Ihnen vor Ort"
   - "Fünf fertige Reels im Hochformat"
   - "Untertitel in jedem Video"
+  - "Lieferung auf Wunsch innerhalb einer Woche"
   - "Lizenzierte Musik für Social Media"
   - "Zwei Korrekturschleifen pro Video"
   - "Zeitlich unbegrenzte Nutzungsrechte für Social Media"
@@ -77,7 +78,9 @@ faq:
   - frage: "Reichen wirklich vier Stunden für fünf Videos?"
     antwort: "Ja. Die Skripte und der Drehplan stehen vorher, Licht und Technik sind in Minuten aufgebaut. So drehen wir alle fünf Videos am Stück."
   - frage: "Wer schreibt die Skripte?"
-    antwort: "Ich. Sie bringen Ihre Themen und Ihr Wissen ein, ich mache daraus Skripte, die auf Social Media funktionieren. Sie geben sie vor dem Dreh frei."
+    antwort: "Wie Sie möchten. Ich schreibe die Skripte aus Ihren Themen und Ihrem Wissen. Haben Sie lieber eigene, prüfe ich sie vor dem Dreh auf Einstieg, Länge und Social-Media-Tauglichkeit."
+  - frage: "Wie schnell bekomme ich die Videos?"
+    antwort: "Auf Wunsch innerhalb einer Woche nach dem Dreh. So können Sie direkt mit dem Posten loslegen."
   - frage: "Muss ich selbst vor die Kamera?"
     antwort: "Nicht unbedingt. Das können Sie, Ihre Mitarbeiter oder auch nur Ihre Produkte und Arbeitsabläufe sein. Wir klären das im Briefing."
   - frage: "Für welche Kanäle sind die Videos?"

@@ -18,7 +18,7 @@ ziele:
   - titel: Meilensteine festhalten
     text: "Go-Lives, Bauprojekte und Saisons bleiben als Geschichte erhalten."
 zielgruppe: "Veranstalter, HR, Projektleiter und Sport-Teams"
-dauer: "[Dauer folgt]"
+dauer_satz: "Die Lieferzeit richtet sich nach dem Umfang – Sie erfahren sie verbindlich mit dem Angebot."
 ablauf_titel: "So entsteht Ihr Film"
 cta_titel: "Lassen Sie uns über Ihren Moment sprechen."
 varianten_titel: "Ein Tag oder ein ganzes Projekt"
@@ -83,7 +83,7 @@ bausteine:
   - name: Social Snippets
     text: "Die besten Szenen im Hochformat, noch während oder direkt nach dem Event."
   - name: Fotos
-    text: "Event-Fotos nebenbei oder durch eine zweite Person, je nach Umfang."
+    text: "Professionelle Event-Fotos durch einen Fotografen aus meinem Netzwerk – parallel zum Videodreh."
 beispiel: ""
 faq:
   - frage: "Was ist der Unterschied zwischen The Event und The Journey?"
@@ -92,6 +92,8 @@ faq:
     antwort: "Kaum. Ich arbeite allein, mit kompaktem Equipment, und bewege mich unauffällig im Geschehen."
   - frage: "Wie lang wird der Film?"
     antwort: "Ein Highlight-Film dauert meist 90 bis 120 Sekunden. Längere Fassungen oder mehrere Teile sind nach Absprache möglich."
+  - frage: "Wann bekommen wir den Film?"
+    antwort: "Das hängt vom Umfang ab. Die Lieferzeit steht verbindlich in Ihrem Angebot."
   - frage: "Begleitet ihr auch Sport-Teams?"
     antwort: "Ja. Sport ist meine Leidenschaft – von einzelnen Rennen bis zur ganzen Saison."
   - frage: "Was kostet Momentum?"

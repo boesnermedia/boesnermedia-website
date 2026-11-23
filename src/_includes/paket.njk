@@ -62,7 +62,7 @@ layout: base.njk
     <div class="section-head">
       <span class="eyebrow">Komplettbetreuung</span>
       <h2 id="ablauf-titel" class="h-display">{{ ablauf_titel or "So entsteht Ihr Video" }}<span class="brand">.</span></h2>
-      {% if dauer and dauer[0] != "[" %}<p class="lead" style="margin: 0">Vom Briefing bis zum fertigen Video: <strong>{{ dauer }}</strong>.</p>{% endif %}
+      {% if dauer_satz %}<p class="lead" style="margin: 0">{{ dauer_satz }}</p>{% elif dauer and dauer[0] != "[" %}<p class="lead" style="margin: 0">Vom Briefing bis zum fertigen Video: <strong>{{ dauer }}</strong>.</p>{% endif %}
     </div>
     <div class="cards">
       {% for ph in phasen %}
