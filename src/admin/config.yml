@@ -57,6 +57,7 @@ collections:
                   - { label: Zielgruppe, name: zielgruppe, widget: string }
                   - { label: Versprechen, name: versprechen, widget: string }
                   - { label: Vorschauvideo (5 Sek.), name: video, widget: file, required: false }
+                  - { label: Link zur Paketseite, name: link, widget: string, required: false }
               - { label: Linktext unter den Paketen, name: link_text, widget: string }
           - label: Zahlen
             name: zahlen
@@ -126,6 +127,59 @@ collections:
           - { label: E-Mail, name: email, widget: string }
           - { label: Antwortzeit, name: antwortzeit, widget: string }
           - { label: Formular-Server (setzt Claude), name: anfrage_endpunkt, widget: hidden }
+  - name: pakete
+    label: Paketseiten
+    label_singular: Paketseite
+    folder: src/loesungen
+    extension: md
+    format: frontmatter
+    create: false
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: paket.njk }
+      - { label: Adresse, name: permalink, widget: hidden }
+      - { label: Seitentitel (Google), name: title, widget: string }
+      - { label: Beschreibung (Google), name: description, widget: text }
+      - { label: Paketname, name: name, widget: string }
+      - { label: Kleine Zeile oben, name: eyebrow, widget: string }
+      - { label: Versprechen, name: claim, widget: string }
+      - { label: Einleitung, name: intro, widget: text }
+      - { label: Beispielvideo, name: video, widget: file, required: false }
+      - { label: Überschrift Ziele, name: ziel_titel, widget: string }
+      - label: Ziele
+        name: ziele
+        widget: list
+        fields:
+          - { label: Titel, name: titel, widget: string }
+          - { label: Text, name: text, widget: string }
+      - { label: Zielgruppe, name: zielgruppe, widget: string }
+      - label: Phasen
+        name: phasen
+        widget: list
+        fields:
+          - { label: Titel, name: titel, widget: string }
+          - { label: Untertitel, name: untertitel, widget: string }
+          - label: Leistungen
+            name: leistungen
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Text, name: text, widget: string }
+      - { label: Immer inklusive, name: inklusive, widget: list }
+      - { label: Text zu den Bausteinen, name: bausteine_text, widget: text }
+      - label: Bausteine
+        name: bausteine
+        widget: list
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Text, name: text, widget: string }
+      - { label: Beispielprojekt, name: beispiel, widget: text }
+      - label: Häufige Fragen
+        name: faq
+        widget: list
+        fields:
+          - { label: Frage, name: frage, widget: string }
+          - { label: Antwort, name: antwort, widget: text }
+      - { label: Text, name: body, widget: hidden, required: false }
   - name: rechtliches
     label: Impressum & Datenschutz
     files:

@@ -18,7 +18,7 @@
     "titel": "Drei Wege zu Bewegtbild,",
     "titel_akzent": "das wirkt.",
     "liste": [
-      { "name": "THE EXPLAINER", "zielgruppe": "Hidden Champions", "versprechen": "Komplexe Technik in unter 180 Sek. verstehen.", "video": "" },
+      { "name": "THE EXPLAINER", "zielgruppe": "Hidden Champions", "versprechen": "Komplexe Technik in unter 180 Sek. verstehen.", "video": "", "link": "/loesungen/erklaervideo/" },
       { "name": "THE CONTENT SPRINT", "zielgruppe": "Local Heroes", "versprechen": "Ein Monat Content an einem Vormittag.", "video": "" },
       { "name": "THE MOMENTUM", "zielgruppe": "Events & Brands", "versprechen": "Echte Emotionen im Doku-Style.", "video": "" }
     ],

@@ -117,6 +117,17 @@
       .finally(function () { btn.disabled = false; btn.textContent = "Anfrage senden"; });
   });
 
+  // Kommt der Besucher von einer Paketseite, ist das Paket schon gewählt
+  var paket = new URLSearchParams(location.search).get("paket");
+  if (paket) {
+    var chip = form.querySelector('input[name="interesse"][value="' + paket.replace(/"/g, "") + '"]');
+    if (chip) {
+      document.getElementById("typ-neu").checked = true;
+      chip.checked = true;
+      setStep(2);
+    }
+  }
+
   danke.querySelector("[data-edit]").addEventListener("click", function () {
     danke.hidden = true;
     form.hidden = false;

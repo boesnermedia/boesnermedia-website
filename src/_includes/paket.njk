@@ -1,0 +1,105 @@
+---
+layout: base.njk
+---
+{% set anfrage = "/kontakt/?paket=" + (name | urlencode) %}
+
+<section class="hero dark" aria-labelledby="paket-titel">
+  <div class="hero-visual">
+    <div class="skew" style="height: 100%">
+      <div class="skew-media">
+        {% if video %}<video src="{{ video }}" controls preload="none" aria-label="Beispielvideo {{ name }}"></video>{% else %}<span class="placeholder">[Beispielvideo {{ name }}]</span>{% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-text">
+      <nav aria-label="Brotkrumen" class="small muted"><a href="/" class="tap">Start</a> / <a href="/#loesungen" class="tap">Lösungen</a> / {{ name }}</nav>
+      <span class="eyebrow">{{ eyebrow }}</span>
+      <h1 id="paket-titel" class="h-paket">{{ name }}<br><span class="brand">{{ claim }}</span></h1>
+      <p class="lead">{{ intro }}</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="{{ anfrage }}">{{ name | replace("THE ", "") | lower | capitalize }} anfragen</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section light" aria-labelledby="ziel-titel">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Für {{ zielgruppe }}</span>
+      <h2 id="ziel-titel" class="h-display">{{ ziel_titel }}<span class="brand">.</span></h2>
+    </div>
+    <div class="numbers">
+      {% for z in ziele %}
+      <div><div class="step-n">{{ "0" if loop.index < 10 }}{{ loop.index }}</div><h3 style="font-size: 22px; line-height: 28px; margin-top: 8px">{{ z.titel }}</h3><p>{{ z.text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section dark" aria-labelledby="ablauf-titel">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Komplettbetreuung</span>
+      <h2 id="ablauf-titel" class="h-display">So entsteht Ihr Video<span class="brand">.</span></h2>
+    </div>
+    <div class="cards">
+      {% for ph in phasen %}
+      <article class="card">
+        <span class="eyebrow plain brand">Phase {{ loop.index }} · {{ ph.untertitel }}</span>
+        <h3 class="h-package">{{ ph.titel }}</h3>
+        <dl style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+          {% for l in ph.leistungen %}<div><dt style="font-weight: 700; font-size: 15px">{{ l.name }}</dt><dd style="margin: 2px 0 0; font-size: 14px; line-height: 22px; color: var(--muted)">{{ l.text }}</dd></div>{% endfor %}
+        </dl>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section light" aria-labelledby="inklusive-titel">
+  <div class="wrap split" style="align-items: start">
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <span class="eyebrow">Immer dabei</span>
+      <h2 id="inklusive-titel" class="h-l">Was in jedem {{ name }} steckt<span class="brand">.</span></h2>
+      <ul class="check">{% for i in inklusive %}<li>{{ i }}</li>{% endfor %}</ul>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <span class="eyebrow">Bausteine nach Bedarf</span>
+      <p class="lead" style="margin: 0">{{ bausteine_text }}</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
+        {% for b in bausteine %}<div style="background: var(--paper-50); border-top: 3px solid var(--magenta-500); padding: 16px"><h3 style="font-size: 16px; line-height: 22px">{{ b.name }}</h3><p class="small muted" style="margin: 4px 0 0">{{ b.text }}</p></div>{% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section deep dark" aria-labelledby="beispiel-titel">
+  <div class="wrap">
+    <div class="pager"><span>Beispiel</span><span>{{ name }}</span></div>
+    <h2 id="beispiel-titel" class="visually-hidden">Beispielprojekt</h2>
+    <p class="placeholder" style="text-align: left; padding: 32px 0 0">{{ beispiel }}</p>
+  </div>
+</section>
+
+<section class="section light" aria-labelledby="faq-titel">
+  <div class="wrap" style="max-width: 900px">
+    <div class="section-head">
+      <span class="eyebrow">Häufige Fragen</span>
+      <h2 id="faq-titel" class="h-l">Gut zu wissen<span class="brand">.</span></h2>
+    </div>
+    <div class="faq">
+      {% for f in faq %}<details><summary>{{ f.frage }}</summary><p>{{ f.antwort }}</p></details>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="academy accent" aria-labelledby="cta-titel">
+  <div class="wrap">
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+      <span class="eyebrow plain" style="color: #fff">Nächster Schritt</span>
+      <h2 id="cta-titel" class="h-display">Lassen Sie uns über Ihr Video sprechen.</h2>
+      <p style="margin: 0; font-size: 18px; line-height: 30px">In der kostenlosen Potenzial-Analyse klären wir Ziel, Bausteine und Ablauf. Danach bekommen Sie ein Festpreis-Angebot.</p>
+    </div>
+    <a class="btn btn-primary" href="{{ anfrage }}">Potenzial-Analyse buchen</a>
+  </div>
+</section>

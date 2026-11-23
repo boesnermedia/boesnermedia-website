@@ -47,7 +47,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 h1, h2, h3 { margin: 0; font-weight: 800; }
 .h-xl { font-size: 76px; line-height: 74px; letter-spacing: -1.5px; }
 .h-display { font-size: 52px; line-height: 56px; letter-spacing: -1px; }
-.h-l { font-size: 46px; line-height: 50px; letter-spacing: -1px; overflow-wrap: break-word; hyphens: auto; }
+.h-l { font-size: 46px; line-height: 50px; letter-spacing: -1px; overflow-wrap: break-word; }
+.h-paket { font-size: 64px; line-height: 64px; letter-spacing: -1.5px; }
+.h-paket .brand { display: inline-block; margin-top: 12px; font-size: .6em; line-height: 1.1; }
 .h-package { font-size: 20px; line-height: 24px; letter-spacing: .8px; text-transform: uppercase; }
 .brand { color: var(--brand-text); }
 .lead { margin: 0; font-size: 18px; line-height: 30px; color: var(--muted); }
@@ -210,6 +212,7 @@ form:has(input[name="kundentyp"]:checked) .before-type { display: none; }
   .h-xl { font-size: 44px; line-height: 46px; }
   .h-display { font-size: 36px; line-height: 40px; }
   .h-l { font-size: 32px; line-height: 36px; }
+  .h-paket { font-size: 40px; line-height: 42px; }
   .hero .wrap { padding-top: 64px; padding-bottom: 80px; }
   .hero-visual { position: relative; right: auto; top: auto; width: calc(100% - 40px); height: 240px; margin: 0 auto 0 20px; }
   .section { padding: 72px 0; }
@@ -226,3 +229,17 @@ form:has(input[name="kundentyp"]:checked) .before-type { display: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+/* Häkchen-Liste */
+.check { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.check li { display: flex; gap: 10px; font-size: 17px; line-height: 26px; }
+.check li::before { content: "✓"; color: var(--brand-text); font-weight: 800; }
+
+/* Häufige Fragen: aufklappbar, per Tastatur bedienbar */
+.faq { border-top: 1px solid var(--rule); }
+.faq details { border-bottom: 1px solid var(--navy-100); }
+.faq summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; padding: 12px 0; font-size: 17px; font-weight: 700; cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 24px; color: var(--magenta-500); flex: none; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: 0 0 16px; color: var(--muted); }

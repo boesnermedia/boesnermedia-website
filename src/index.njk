@@ -55,7 +55,7 @@ description: Videoproduktion für Industrie, Handel und Sport aus Winnenden – 
         <span class="eyebrow plain">{{ p.zielgruppe }}</span>
         <h3 class="h-package">{{ p.name }}</h3>
         <p>{{ p.versprechen }}</p>
-        <a class="link" href="/kontakt/" aria-label="{{ p.name }} anfragen">Anfragen</a>
+        {% if p.link %}<a class="link" href="{{ p.link }}" aria-label="Mehr zu {{ p.name }}">Zum Paket</a>{% else %}<a class="link" href="/kontakt/?paket={{ p.name | urlencode }}" aria-label="{{ p.name }} anfragen">Anfragen</a>{% endif %}
       </article>
       {% endfor %}
     </div>
