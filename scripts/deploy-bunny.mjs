@@ -89,6 +89,21 @@ if (apiKey && pullZoneId) {
       if (r.ok) neu++; else console.log(`Weiterleitung ${w.von} nicht angelegt: ${r.status} ${await r.text()}`);
     }
     console.log(`Weiterleitungen: ${liste.length} gesamt, ${neu} neu angelegt.`);
+
+    // Eine Hauptadresse: boesnermedia.de und die Testadresse leiten auf www.boesnermedia.de
+    const haupt = "Domain: alles auf www.boesnermedia.de (v1)";
+    if (!vorhanden.has(haupt)) {
+      const r = await fetch(`${zoneUrl}/edgerules/addOrUpdate`, { method: "POST", headers: { AccessKey: apiKey, "Content-Type": "application/json" }, body: JSON.stringify({
+        ActionType: 1,
+        ActionParameter1: "https://www.boesnermedia.de/%{Path.0-}",
+        ActionParameter2: "301",
+        TriggerMatchingType: 0,
+        Triggers: [{ Type: 0, PatternMatches: ["*://boesnermedia.de/*", "*://boesnermedia.de", "*://boesnermedia.b-cdn.net/*", "*://boesnermedia.b-cdn.net"], PatternMatchingType: 0, Parameter1: "" }],
+        Description: haupt,
+        Enabled: true
+      }) });
+      console.log(r.ok ? "Hauptadresse www.boesnermedia.de eingerichtet." : `Hauptadresse nicht eingerichtet: ${r.status} ${await r.text()}`);
+    }
   } catch (e) {
     console.log("Hinweis: Weiterleitungen nicht geprüft:", e.message);
   }
