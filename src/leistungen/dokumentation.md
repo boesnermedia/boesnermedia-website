@@ -94,7 +94,7 @@ bausteine:
     text: "Untertitel oder KI-Übersetzung mit Lippenanpassung, pro Sprache."
   - name: Express
     text: "Lieferung in unter einer Woche, wenn es schnell gehen muss."
-beispiel: ""
+beispiel: "Simplon „The New York Attempt“ mit Alex Müller: Aus einer Produktion in New York entstanden eine Doku, Trailer, Social-Clips und 150 Kampagnenfotos für den Launch des Pride II."
 faq:
   - frage: "Welches Format passt zu uns?"
     antwort: "Für einen Tag reicht meist das Event-Highlight. Für einen Launch oder eine Athleten-Story die Kampagne kompakt. Für ein Projekt über Wochen die Doku-Kampagne. Im Erstgespräch finden wir das schnell heraus."
