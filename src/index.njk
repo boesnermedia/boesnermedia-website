@@ -85,7 +85,7 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
   <div class="wrap split">
     <div class="skew" style="aspect-ratio: 16 / 10; margin: 0 24px">
       <div class="skew-media" style="inset: 16px 40px 16px 28px; background: var(--navy-700)">
-        {% if c.video %}<video src="{{ c.video }}" {% if c.bild %}poster="{{ c.bild }}"{% endif %} controls playsinline preload="none"></video>{% elif c.bild %}<img src="{{ c.bild }}" alt="{{ c.titel }} {{ c.titel_akzent }}" loading="lazy" style="object-position: center top">{% else %}<span class="placeholder" style="color: #fff">[Video-Ausschnitt]</span>{% endif %}
+        {% if c.video %}<button type="button" class="hero-play" data-reel-open="case-video" aria-label="Video {{ c.titel }} abspielen">{% if c.bild %}<img src="{{ c.bild }}" alt="" style="object-position: center top">{% endif %}<span class="hero-play-icon" aria-hidden="true">▶</span></button>{% elif c.bild %}<img src="{{ c.bild }}" alt="{{ c.titel }} {{ c.titel_akzent }}" loading="lazy" style="object-position: center top">{% else %}<span class="placeholder" style="color: #fff">[Video-Ausschnitt]</span>{% endif %}
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 18px">
@@ -96,7 +96,7 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
         <div><dt>Lösung</dt><dd>{{ c.loesung }}</dd></div>
         <div><dt>Ergebnis</dt><dd>{{ c.ergebnis }}</dd></div>
       </dl>
-      <a class="link" href="/projekte/">Alle Projekte</a>
+      <div class="hero-actions" style="margin-top: 8px">{% if c.video %}<button type="button" class="btn btn-secondary" data-reel-open="case-video">▶ Film ansehen</button>{% endif %}<a class="link" href="/projekte/" style="align-self: center">Alle Projekte</a></div>
     </div>
   </div>
 </section>
@@ -165,3 +165,12 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
     </div>
   </div>
 </div>
+
+{% if c.video %}
+<div class="reel" id="case-video" role="dialog" aria-modal="true" aria-label="Video {{ c.titel }}" hidden>
+  <div class="reel-inner" style="display: flex; flex-direction: column; gap: 16px">
+    <button type="button" class="btn btn-secondary reel-close dark" style="background: none" data-reel-close>✕ Schließen</button>
+    <div class="reel-player"><video src="{{ c.video }}" {% if c.bild %}poster="{{ c.bild }}"{% endif %} controls playsinline preload="none" style="width: 100%; height: 100%"></video></div>
+  </div>
+</div>
+{% endif %}

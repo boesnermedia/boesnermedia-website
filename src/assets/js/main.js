@@ -29,11 +29,9 @@
     if (loopBtn) loopBtn.addEventListener("click", function () { setPaused(!loop.paused ? true : false); });
   }
 
-  // Showreel-Fenster: startet erst auf Klick, schließt per Knopf oder Esc
-  var reel = document.getElementById("reel");
+  // Video-Fenster (Showreel, Beispiele, Cases): starten erst auf Klick, schließen per Knopf, Klick daneben oder Esc
   var opener = null;
-  function closeReel() {
-    if (!reel) return;
+  function closeReel(reel) {
     var v = reel.querySelector("video");
     if (v) v.pause();
     reel.hidden = true;
@@ -42,18 +40,21 @@
   }
   document.querySelectorAll("[data-reel-open]").forEach(function (b) {
     b.addEventListener("click", function () {
+      var reel = document.getElementById(b.getAttribute("data-reel-open") || "reel");
       if (!reel) return;
       opener = b;
       reel.hidden = false;
       document.body.style.overflow = "hidden";
       reel.querySelector("[data-reel-close]").focus();
+      var v = reel.querySelector("video");
+      if (v && !reduce) v.play().catch(function () {});
     });
   });
-  if (reel) {
-    reel.querySelector("[data-reel-close]").addEventListener("click", closeReel);
-    reel.addEventListener("keydown", function (e) { if (e.key === "Escape") closeReel(); });
-    reel.addEventListener("click", function (e) { if (e.target === reel) closeReel(); });
-  }
+  document.querySelectorAll(".reel").forEach(function (reel) {
+    reel.querySelector("[data-reel-close]").addEventListener("click", function () { closeReel(reel); });
+    reel.addEventListener("keydown", function (e) { if (e.key === "Escape") closeReel(reel); });
+    reel.addEventListener("click", function (e) { if (e.target === reel) closeReel(reel); });
+  });
 
   // Vorschauvideos der Pakete nur bei Zeigen abspielen
   if (!reduce) {
