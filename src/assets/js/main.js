@@ -65,4 +65,22 @@
       card.addEventListener("mouseleave", function () { v.pause(); });
     });
   }
+
+  // Sanftes Hereingleiten beim Scrollen (wie bei Apple), abgeschaltet bei „Bewegung reduzieren“
+  if (!reduce && "IntersectionObserver" in window) {
+    var ziele = document.querySelectorAll(".section-head, .cards > *, .numbers > *, .other-pakete > *, .bausteine > *, .faq, .split > *, .steps > li, .quote, .check li, .academy .wrap > *, .meta > div");
+    var io = new IntersectionObserver(function (eintraege) {
+      eintraege.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("sichtbar"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    ziele.forEach(function (el) {
+      var geschwister = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+      el.setAttribute("data-erscheinen", "");
+      el.style.setProperty("--verzoegerung", Math.min(geschwister, 5) * 0.07 + "s");
+      // Was beim Laden schon sichtbar ist, sofort zeigen
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) el.classList.add("sichtbar");
+      io.observe(el);
+    });
+  }
 })();

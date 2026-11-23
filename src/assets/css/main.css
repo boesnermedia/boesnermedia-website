@@ -345,3 +345,68 @@ html, body { overflow-x: clip; }
 /* Kennzeichnung KI-generierter Bilder */
 .ki-badge { position: absolute; z-index: 2; left: 12%; bottom: -14px; background: var(--navy-950); color: #fff; border: 1px solid rgba(255,255,255,.35); font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .5px; padding: 6px 10px; }
 @media (max-width: 720px) { .ki-badge { left: 28px; bottom: -12px; } }
+
+/* ---------- Kontrast: kleine Magenta-Schrift auf dunklen Karten ---------- */
+.dark .card .brand, .dark .card .eyebrow.brand { color: #f07ab3; }
+
+/* Bilder in Schrägflächen (nach Umwandlung in <picture>) */
+.skew-media picture > img { transform: skewX(13deg); }
+
+/* ---------- Bewegung im Apple-Stil: ruhig, kurz, nie störend ---------- */
+html { scroll-behavior: smooth; }
+.card, .other-paket, .baustein { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s cubic-bezier(.2,.7,.2,1), border-color .2s; }
+a.card:hover, .card:hover, a.other-paket:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(8,18,33,.25); }
+.card-media { overflow: hidden; }
+.card-media img, .card-media video { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.card:hover .card-media img, .card:hover .card-media video { transform: scale(1.04); }
+.btn { transition: filter .2s, transform .15s cubic-bezier(.2,.7,.2,1), background-color .2s, color .2s; }
+.btn:active { transform: scale(.97); }
+.link { transition: border-color .2s, color .2s; }
+.faq details[open] p { animation: faq-auf .35s cubic-bezier(.2,.7,.2,1); }
+@keyframes faq-auf { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.reel:not([hidden]) { animation: reel-auf .3s ease-out; }
+.reel:not([hidden]) .reel-inner { animation: reel-hoch .45s cubic-bezier(.2,.7,.2,1); }
+@keyframes reel-auf { from { opacity: 0; } to { opacity: 1; } }
+@keyframes reel-hoch { from { opacity: 0; transform: translateY(24px) scale(.98); } to { opacity: 1; transform: none; } }
+
+/* Inhalte gleiten beim Scrollen sanft herein – nur wenn JavaScript läuft */
+.js-bewegung [data-erscheinen] { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--verzoegerung, 0s); }
+.js-bewegung [data-erscheinen].sichtbar { opacity: 1; transform: none; }
+@keyframes hero-ein { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes hero-bild { from { transform: translateX(32px); } to { transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js-bewegung [data-erscheinen] { opacity: 1; transform: none; }
+  .card:hover, a.other-paket:hover { transform: none; }
+  .card:hover .card-media img, .card:hover .card-media video { transform: none; }
+}
+
+/* <picture> aus der Bildoptimierung soll das Layout nicht verändern */
+picture { display: contents; }
+
+/* ---------- Tablet (iPad hochkant, kleine Laptops) ---------- */
+@media (min-width: 721px) and (max-width: 1023px) {
+  .menu-btn { display: inline-flex; min-height: 44px; align-items: center; }
+  .nav { display: none; width: 100%; flex-direction: column; align-items: stretch; padding: 8px 0 16px; }
+  .nav.open { display: flex; }
+  .nav a { min-height: 44px; display: flex; align-items: center; }
+  .hero .wrap { padding-top: 80px; padding-bottom: 48px; }
+  .hero-text { max-width: 640px; }
+  .paket-hero { display: flex; flex-direction: column; }
+  .paket-hero .hero-visual { position: relative; right: auto; top: auto; order: 2; width: calc(100% - 96px); height: 380px; margin: 0 0 80px 48px; }
+}
+@media (min-width: 1024px) and (max-width: 1240px) {
+  .hero-text { max-width: 48%; }
+  .hero-visual { width: 44%; }
+}
+/* Links im Fließtext: größere Tippfläche ohne das Schriftbild zu ändern */
+.hint a, .prose a { padding: 6px 0; }
+/* Navigation: bis 1099 px (iPad quer) als Menü-Knopf, damit der Kopf einzeilig bleibt */
+@media (min-width: 721px) and (max-width: 1099px) {
+  .menu-btn { display: inline-flex; min-height: 44px; align-items: center; }
+  .nav { display: none; width: 100%; flex-direction: column; align-items: stretch; padding: 8px 0 16px; }
+  .nav.open { display: flex; }
+  .nav a { min-height: 44px; display: flex; align-items: center; }
+}
