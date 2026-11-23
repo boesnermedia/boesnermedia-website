@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ title }}{% if title != site.name %} · {{ site.name }}{% endif %}</title>
+<title>{{ title }}{% if "Bösner Media" not in title %} · {{ site.name }}{% endif %}</title>
 <meta name="description" content="{{ description or site.beschreibung }}">
+{% if noindex %}<meta name="robots" content="noindex">{% endif %}
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 <link rel="icon" href="/assets/img/mark.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0e1c32">
