@@ -9,12 +9,12 @@ scripts: ["/assets/js/anfrage.js"]
 <div class="wrap form-page">
 
   <aside class="form-aside">
+    <span class="eyebrow">Kontakt</span>
     <h1 class="h-display">Jetzt loslegen<span class="brand">.</span></h1>
     <p class="lead">Ob neues Projekt oder Frage zu einem laufenden Auftrag: ein Formular, Antwort {{ site.antwortzeit }}.</p>
-    <div aria-hidden="true" style="height: 110px; width: 84px; background: var(--magenta-500); transform: skewX(-13deg); margin: 4px 0 4px 24px"></div>
-    <dl style="margin: 0; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--navy-900); padding-top: 14px">
+    <dl style="margin: 12px 0 0; display: flex; flex-direction: column; gap: 20px; border-top: 1px solid var(--navy-900); padding-top: 20px">
       <div><dt class="eyebrow plain" style="color: var(--navy-900)">Lieber direkt?</dt>
-        <dd style="margin: 0; display: flex; flex-wrap: wrap; gap: 0 20px; font-size: 15px; font-weight: 700"><a class="tap" href="tel:{{ site.telefon_link }}">{{ site.telefon }}</a><a class="tap" href="mailto:{{ site.email }}">{{ site.email }}</a></dd></div>
+        <dd style="margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 15px; font-weight: 700"><a class="tap" href="tel:{{ site.telefon_link }}">{{ site.telefon }}</a><a class="tap" href="mailto:{{ site.email }}">{{ site.email }}</a></dd></div>
       <div><dt class="eyebrow plain" style="color: var(--navy-900)">Adresse</dt><dd class="small muted" style="margin: 4px 0 0">{{ site.strasse }} · {{ site.ort }}</dd></div>
     </dl>
     <p class="hint">Ich nutze Ihre Angaben nur, um Ihre Anfrage zu beantworten. Keine Weitergabe, kein Newsletter. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
@@ -52,7 +52,7 @@ scripts: ["/assets/js/anfrage.js"]
       <fieldset>
         <legend class="big">Sind Sie bereits Kunde?</legend>
         <div class="choices">
-          <label class="choice"><input type="radio" name="kundentyp" id="typ-neu" value="Neukunde"><span><b>Nein, ich bin neu</b><small>Projekt, Paket, Kurs oder Workshop</small></span></label>
+          <label class="choice"><input type="radio" name="kundentyp" id="typ-neu" value="Neukunde"><span><b>Nein, ich bin neu</b><small>Neues Projekt oder Workshop</small></span></label>
           <label class="choice"><input type="radio" name="kundentyp" id="typ-bestand" value="Bestandskunde"><span><b>Ja, ich bin Kunde</b><small>Folgeauftrag, Änderung, Organisatorisches</small></span></label>
         </div>
         <p class="hint before-type" style="margin-top: 14px">Danach sehen Sie nur die Fragen, die für Sie passen. Dauert rund 2 Minuten.</p>

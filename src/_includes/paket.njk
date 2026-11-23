@@ -35,8 +35,8 @@ layout: base.njk
   <div class="wrap">
     <div class="hero-text">
       <nav aria-label="Brotkrumen" class="small muted"><a href="/" class="tap">Start</a> / <a href="/#loesungen" class="tap">Leistungen</a> / {{ feld or name }}</nav>
-      <span class="eyebrow">{{ eyebrow }}</span>
-      <h1 id="paket-titel" class="h-paket">{% if feld %}<span class="paket-name">{{ name }}</span>{{ feld }}{% else %}{{ name }}{% endif %}<br><span class="brand">{{ claim }}</span></h1>
+      <span class="eyebrow">{% if feld %}{{ name }}{% else %}{{ eyebrow }}{% endif %}</span>
+      <h1 id="paket-titel" class="h-paket">{{ feld or name }}<span class="brand claim">{{ claim }}</span></h1>
       <p class="lead">{{ intro }}</p>
       <div class="hero-actions"><a class="btn btn-primary" href="{{ anfrage }}">{{ kurzname or name }} anfragen</a></div>
     </div>
@@ -69,7 +69,7 @@ layout: base.njk
       <article class="card">
         <span class="eyebrow plain brand">Phase {{ loop.index }} · {{ ph.untertitel }}</span>
         <h3 class="h-package">{{ ph.titel }}</h3>
-        <dl style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+        <dl class="phase-list" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
           {% for l in ph.leistungen %}<div><dt style="font-weight: 700; font-size: 15px">{{ l.name }}</dt><dd style="margin: 2px 0 0; font-size: 14px; line-height: 22px; color: var(--muted)">{{ l.text }}</dd></div>{% endfor %}
         </dl>
       </article>
@@ -116,8 +116,8 @@ layout: base.njk
     <div style="display: flex; flex-direction: column; gap: 20px">
       <span class="eyebrow">Bausteine nach Bedarf</span>
       <p class="lead" style="margin: 0">{{ bausteine_text }}</p>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
-        {% for b in bausteine %}<div style="background: #fff; border-top: 3px solid var(--magenta-500); padding: 16px"><h3 style="font-size: 16px; line-height: 22px">{{ b.name }}</h3><p class="small muted" style="margin: 4px 0 0">{{ b.text }}</p></div>{% endfor %}
+      <div class="bausteine">
+        {% for b in bausteine %}<div class="baustein"><h3>{{ b.name }}</h3><p class="small muted">{{ b.text }}</p></div>{% endfor %}
       </div>
     </div>
   </div>
