@@ -10,6 +10,9 @@ eyebrow: "KI-Enablement · Workshops und Vorträge"
 claim: "KI sinnvoll nutzen – ohne Hype."
 intro: "KI ist überall, aber kaum jemand hat Zeit, sie sinnvoll einzuführen. Ich nutze KI jeden Tag in meinem eigenen Workflow und zeige Ihrem Team, wie es damit schneller und besser kommuniziert – praxisnah, ohne Theorie und mit Blick auf Datenschutz."
 video: ""
+bild: "/assets/uploads/ki-workshop.jpg"
+bild_alt: "KI-generiertes Bild: kleiner Workshop mit Laptops an einem Holztisch, auf einem Bildschirm ein Workflow-Diagramm"
+bild_ki: true
 ziel_titel: "Was Ihr Team aus THE LAB mitnimmt"
 ziele:
   - titel: Sicherer Umgang

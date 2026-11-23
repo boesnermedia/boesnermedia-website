@@ -26,9 +26,10 @@ layout: base.njk
 
 <section class="hero dark paket-hero" aria-labelledby="paket-titel">
   <div class="hero-visual">
+    {% if bild_ki and not video %}<span class="ki-badge">KI-generiertes Bild</span>{% endif %}
     <div class="skew" style="height: 100%">
       <div class="skew-media">
-        {% if video %}<button type="button" class="hero-play" data-reel-open aria-label="Beispielvideo {{ feld or name }} abspielen">{% if video_poster %}<img src="{{ video_poster }}" alt="">{% endif %}<span class="hero-play-icon" aria-hidden="true">▶</span></button>{% elif bild %}<img src="{{ bild }}" alt="{{ feld or name }} – Beispielbild" fetchpriority="high">{% else %}<span class="placeholder">[Beispielvideo {{ name }}]</span>{% endif %}
+        {% if video %}<button type="button" class="hero-play" data-reel-open aria-label="Beispielvideo {{ feld or name }} abspielen">{% if video_poster %}<img src="{{ video_poster }}" alt="">{% endif %}<span class="hero-play-icon" aria-hidden="true">▶</span></button>{% elif bild %}<img src="{{ bild }}" alt="{{ bild_alt or ((feld or name) + ' – Beispielbild') }}" fetchpriority="high">{% else %}<span class="placeholder">[Beispielvideo {{ name }}]</span>{% endif %}
       </div>
     </div>
   </div>
