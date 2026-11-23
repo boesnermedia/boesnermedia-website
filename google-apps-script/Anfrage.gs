@@ -6,6 +6,14 @@
 
 var EMPFAENGER = 'info@boesnermedia.de';
 var ABSENDER_NAME = 'Niklas Bösner · Bösner Media';
+// Paketnamen aus dem Formular in verständliche Leistungen übersetzen
+var LEISTUNGEN = {
+  'THE MOMENTUM': 'Dokumentation & Kampagne (THE MOMENTUM)',
+  'THE EXPLAINER': 'Technische Erklärvideos (THE EXPLAINER)',
+  'THE CONTENT SPRINT': 'Social Media Content (THE CONTENT SPRINT)',
+  'THE STATEMENT': 'Unternehmenskommunikation (THE STATEMENT)',
+  'THE LAB': 'KI-Workshops (THE LAB)'
+};
 var SIGNATUR = 'Viele Grüße\nNiklas Bösner\nBösner Media · Karlstraße 4 · 71364 Winnenden · +49 173 6094285\nwww.boesnermedia.de';
 
 function doPost(e) {
@@ -26,7 +34,6 @@ function doPost(e) {
       email: f('email'),
       telefon: f('telefon', 50),
       zeitraum: f('zeitraum'),
-      budget: f('budget'),
       auftragsnummer: f('auftragsnummer', 50),
       dringlichkeit: f('dringlichkeit'),
       nachricht: f('nachricht', 5000)
@@ -47,15 +54,18 @@ function doPost(e) {
 
     var zeilen = [
       ['Kundentyp', d.kundentyp],
-      [neu ? 'Interesse' : 'Anliegen', neu ? d.interesse : d.anliegen],
+      neu ? ['Interesse', LEISTUNGEN[d.interesse] || d.interesse] : ['Anliegen', d.anliegen],
       ['Name', d.name],
       ['Unternehmen', d.unternehmen],
       ['E-Mail', d.email],
-      ['Telefon', d.telefon || '–']
+      ['Telefon', d.telefon]
     ];
-    if (neu) zeilen.push(['Zeitraum', d.zeitraum], ['Budget', d.budget]);
-    else zeilen.push(['Auftragsnummer', d.auftragsnummer || '–'], ['Dringlichkeit', d.dringlichkeit || '–']);
-    var uebersicht = zeilen.map(function (z) { return z[0] + ': ' + (z[1] || '–'); }).join('\n');
+    if (neu) zeilen.push(['Zeitraum', d.zeitraum]);
+    else zeilen.push(['Auftragsnummer', d.auftragsnummer], ['Dringlichkeit', d.dringlichkeit]);
+    var uebersicht = zeilen
+      .filter(function (z) { return z[1]; })
+      .map(function (z) { return z[0] + ': ' + z[1]; })
+      .join('\n');
 
     // 1. E-Mail an dich. „Antworten“ geht direkt an den Kunden.
     MailApp.sendEmail({
