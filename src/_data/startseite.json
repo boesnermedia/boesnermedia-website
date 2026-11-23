@@ -20,7 +20,7 @@
     "liste": [
       { "name": "THE EXPLAINER", "zielgruppe": "Hidden Champions", "versprechen": "Komplexe Technik in unter 180 Sek. verstehen.", "video": "", "link": "/loesungen/erklaervideo/" },
       { "name": "THE CONTENT SPRINT", "zielgruppe": "Local Heroes", "versprechen": "Ein Monat Content an einem Vormittag.", "video": "", "link": "/loesungen/social-media-content/" },
-      { "name": "THE MOMENTUM", "zielgruppe": "Events & Brands", "versprechen": "Echte Emotionen im Doku-Style.", "video": "" }
+      { "name": "THE MOMENTUM", "zielgruppe": "Events & Brands", "versprechen": "Echte Emotionen im Doku-Style.", "video": "", "link": "/loesungen/eventvideo/" }
     ],
     "link_text": "Alle Lösungen inkl. THE PODCAST und THE LIVE PRODUCTION"
   },

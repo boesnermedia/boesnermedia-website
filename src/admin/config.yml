@@ -156,6 +156,15 @@ collections:
       - { label: Dauer bis zum fertigen Video, name: dauer, widget: string, required: false }
       - { label: Überschrift Ablauf, name: ablauf_titel, widget: string, required: false }
       - { label: Überschrift Abschluss, name: cta_titel, widget: string, required: false }
+      - { label: Überschrift Varianten, name: varianten_titel, widget: string, required: false }
+      - label: Varianten
+        name: varianten
+        widget: list
+        required: false
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Für wen, name: fuer, widget: string }
+          - { label: Punkte, name: punkte, widget: list }
       - label: Phasen
         name: phasen
         widget: list

@@ -78,6 +78,20 @@ layout: base.njk
   </div>
 </section>
 
+{% if varianten %}
+<section class="section light" aria-labelledby="varianten-titel">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Zwei Varianten</span>
+      <h2 id="varianten-titel" class="h-display">{{ varianten_titel }}<span class="brand">.</span></h2>
+    </div>
+    <div class="other-pakete">
+      {% for v in varianten %}<div class="other-paket" style="padding: 32px"><span class="eyebrow plain brand">{{ v.fuer }}</span><strong style="font-size: 28px; line-height: 32px">{{ v.name }}</strong><ul class="check">{% for pt in v.punkte %}<li>{{ pt }}</li>{% endfor %}</ul></div>{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if aufwand %}
 <section class="section light" aria-labelledby="aufwand-titel">
   <div class="wrap">

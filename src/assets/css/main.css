@@ -255,5 +255,5 @@ form:has(input[name="kundentyp"]:checked) .before-type { display: none; }
 .other-pakete { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
 .other-paket { display: flex; flex-direction: column; gap: 8px; padding: 24px; border: 1px solid var(--navy-100); border-top: 3px solid var(--magenta-500); text-decoration: none; color: inherit; min-height: 44px; transition: border-color .2s, transform .2s; }
 .other-paket strong { font-size: 20px; line-height: 26px; font-weight: 800; }
-.other-paket:hover, .other-paket:focus-visible { border-color: var(--magenta-500); transform: translateY(-2px); }
+a.other-paket:hover, a.other-paket:focus-visible { border-color: var(--magenta-500); transform: translateY(-2px); }
 @media (prefers-reduced-motion: reduce) { .other-paket { transition: none; } .other-paket:hover { transform: none; } }
