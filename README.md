@@ -23,7 +23,8 @@ Die Website von Bösner Media. Gebaut mit Claude, gepflegt über das CMS unter *
 ## Stand
 
 - [x] Grundstruktur, Startseite, Kontakt mit Anfrageformular, Impressum und Datenschutz als Platzhalter
-- [ ] Hosting bei Bunny einrichten und Domain umziehen
+- [x] Automatisches Veröffentlichen bei Bunny (`.github/workflows/deploy.yml`)
+- [ ] Domain boesnermedia.de bei Wix auf Bunny zeigen lassen
 - [ ] Formular-Server (E-Mail an dich, Bestätigung an den Kunden)
 - [ ] Inhalte: Showreel, Fotos, Kundenlogos, echte Kennzahl, Impressum und Datenschutzerklärung
 
