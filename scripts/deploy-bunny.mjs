@@ -44,7 +44,13 @@ console.log("Hochladen fertig.");
 
 if (apiKey && pullZoneId) {
   const res = await fetch(`https://api.bunny.net/pullzone/${pullZoneId}/purgeCache`, { method: "POST", headers: { AccessKey: apiKey } });
-  console.log(res.ok ? "CDN-Cache geleert, neue Version ist online." : `Cache leeren fehlgeschlagen: ${res.status}`);
+  if (res.ok) {
+    console.log("CDN-Cache geleert, neue Version ist online.");
+  } else {
+    // Laut scheitern, damit es in GitHub sofort auffällt: sonst bleiben alte Seiten im Zwischenspeicher
+    console.error(`Cache leeren fehlgeschlagen: ${res.status}. Bitte BUNNY_API_KEY (Konto-API-Schlüssel) und BUNNY_PULLZONE_ID prüfen.`);
+    process.exit(1);
+  }
 } else {
   console.log("Hinweis: BUNNY_API_KEY oder BUNNY_PULLZONE_ID fehlt, Cache wurde nicht geleert.");
 }
