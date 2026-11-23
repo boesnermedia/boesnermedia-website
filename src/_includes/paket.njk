@@ -34,7 +34,7 @@ layout: base.njk
   </div>
   <div class="wrap">
     <div class="hero-text">
-      <nav aria-label="Brotkrumen" class="small muted"><a href="/" class="tap">Start</a> / <a href="/#loesungen" class="tap">Lösungen</a> / {{ name }}</nav>
+      <nav aria-label="Brotkrumen" class="small muted"><a href="/" class="tap">Start</a> / <a href="/#loesungen" class="tap">Leistungen</a> / {{ name }}</nav>
       <span class="eyebrow">{{ eyebrow }}</span>
       <h1 id="paket-titel" class="h-paket">{{ name }}<br><span class="brand">{{ claim }}</span></h1>
       <p class="lead">{{ intro }}</p>
@@ -161,15 +161,15 @@ layout: base.njk
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Passt nicht ganz?</span>
-      <h2 id="weitere-titel" class="h-l">Diese Pakete gibt es noch<span class="brand">.</span></h2>
+      <h2 id="weitere-titel" class="h-l">Weitere Leistungen<span class="brand">.</span></h2>
     </div>
     <div class="other-pakete">
       {% for p in startseite.pakete.liste %}{% if p.name != name %}
       <a class="other-paket" href="{{ p.link or ('/kontakt/?paket=' + (p.name | urlencode)) }}">
-        <span class="eyebrow plain brand">{{ p.zielgruppe }}</span>
-        <strong>{{ p.name }}</strong>
+        <span class="eyebrow plain brand">{{ p.name }}</span>
+        <strong>{{ p.feld }}</strong>
         <span class="small muted">{{ p.versprechen }}</span>
-        <span class="link">{{ "Zum Paket" if p.link else "Anfragen" }}</span>
+        <span class="link">Mehr erfahren</span>
       </a>
       {% endif %}{% endfor %}
     </div>

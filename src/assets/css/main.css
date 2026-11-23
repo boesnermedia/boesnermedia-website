@@ -257,3 +257,10 @@ form:has(input[name="kundentyp"]:checked) .before-type { display: none; }
 .other-paket strong { font-size: 20px; line-height: 26px; font-weight: 800; }
 a.other-paket:hover, a.other-paket:focus-visible { border-color: var(--magenta-500); transform: translateY(-2px); }
 @media (prefers-reduced-motion: reduce) { .other-paket { transition: none; } .other-paket:hover { transform: none; } }
+
+/* Leistungsfelder auf der Startseite: 2 × 2 */
+.cards-2 { grid-template-columns: repeat(2, 1fr); }
+.cards-2 .card-media { aspect-ratio: 16 / 7; }
+@media (max-width: 720px) { .cards-2 { grid-template-columns: 1fr; } .cards-2 .card-media { aspect-ratio: 16 / 9; } }
+
+.card h3 { overflow-wrap: anywhere; hyphens: auto; }

@@ -1,6 +1,6 @@
 ---
 layout: paket.njk
-permalink: /loesungen/social-media-content/
+permalink: /social-media/
 title: "THE CONTENT SPRINT – Social-Media-Videos an einem Vormittag"
 description: "Social-Media-Content für Handel, Handwerk, Personal Brands und Recruiting aus Winnenden: 5 Reels an einem Vormittag gedreht. Komplettbetreuung vom Skript bis zum fertigen Schnitt."
 name: THE CONTENT SPRINT

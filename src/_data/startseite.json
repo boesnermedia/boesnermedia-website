@@ -1,9 +1,9 @@
 {
   "hero": {
-    "eyebrow": "Videoproduktion · Rems-Murr · Stuttgart",
+    "eyebrow": "Video · Content · KI-Know-how · Winnenden",
     "titel": "Performance",
     "titel_akzent": "im Fokus.",
-    "text": "Wir machen echte Leistung sichtbar. Videos für Industrie, Handel und Sport, produziert in Winnenden.",
+    "text": "Video, Content und KI-Know-how für Industrie- und Outdoor-Marken, die echte Leistung zeigen – von der Werkbank über den Forst bis aufs Bike.",
     "button": "Potenzial-Analyse buchen",
     "loop_video": "",
     "loop_bild": "",
@@ -14,49 +14,91 @@
     "logos": []
   },
   "pakete": {
-    "eyebrow": "Die Pakete",
-    "titel": "Drei Wege zu Bewegtbild,",
-    "titel_akzent": "das wirkt.",
+    "eyebrow": "Leistungen",
+    "titel": "Fünf Wege, Leistung",
+    "titel_akzent": "sichtbar zu machen.",
     "liste": [
-      { "name": "THE EXPLAINER", "zielgruppe": "Hidden Champions", "versprechen": "Komplexe Technik in unter 180 Sek. verstehen.", "video": "", "link": "/loesungen/erklaervideo/" },
-      { "name": "THE CONTENT SPRINT", "zielgruppe": "Local Heroes", "versprechen": "Ein Monat Content an einem Vormittag.", "video": "", "link": "/loesungen/social-media-content/" },
-      { "name": "THE MOMENTUM", "zielgruppe": "Events & Brands", "versprechen": "Echte Emotionen im Doku-Style.", "video": "", "link": "/loesungen/eventvideo/" },
-      { "name": "THE PODCAST", "zielgruppe": "Experten & Teams", "versprechen": "Ihr Podcast. Komplett produziert.", "video": "", "link": "/loesungen/podcast/", "nur_unterseiten": true }
-    ],
-    "link_text": "Außerdem: THE PODCAST – Podcast-Produktion für Unternehmen", "link_ziel": "/loesungen/podcast/"
+      {
+        "feld": "Dokumentation & Kampagne",
+        "name": "THE MOMENTUM",
+        "versprechen": "Geschichten mit Puls.",
+        "video": "",
+        "link": "/dokumentation/"
+      },
+      {
+        "feld": "Technische Erklärvideos",
+        "name": "THE EXPLAINER",
+        "versprechen": "Komplexe Technik, sofort verstanden.",
+        "video": "",
+        "link": "/erklaervideos/"
+      },
+      {
+        "feld": "Social Media Content",
+        "name": "THE CONTENT SPRINT",
+        "versprechen": "Ein Drehtag, ein Monat Content.",
+        "video": "",
+        "link": "/social-media/"
+      },
+      {
+        "feld": "Unternehmenskommunikation",
+        "name": "THE STATEMENT",
+        "versprechen": "Klare Botschaften aus der Führungsebene.",
+        "video": "",
+        "link": "/unternehmenskommunikation/"
+      },
+      {
+        "feld": "KI-Enablement",
+        "name": "THE LAB",
+        "versprechen": "KI sinnvoll nutzen – ohne Hype.",
+        "video": "",
+        "link": "/#lab",
+        "nur_unterseiten": true
+      }
+    ]
   },
-  "zahlen": [
-    { "wert": "180", "einheit": "Sek.", "text": "So lang braucht ein Explainer für komplexe Technik." },
-    { "wert": "1", "einheit": "Vormittag", "text": "Drehzeit für einen Monat Social-Media-Content." },
-    { "wert": "[ZAHL]", "einheit": "", "text": "[Projekte, Kunden oder Jahre – echte Kennzahl folgt.]" }
-  ],
   "projekt": {
-    "eyebrow": "Projekt · The Podcast",
-    "titel": "Stihl Voices.",
-    "titel_akzent": "Technik, die man hören kann.",
-    "aufgabe": "[Ein Satz nach Freigabe]",
-    "loesung": "[Ein Satz nach Freigabe]",
-    "ergebnis": "[Ein Satz nach Freigabe]",
+    "eyebrow": "Case · Dokumentation & Kampagne",
+    "titel": "The New York Attempt.",
+    "titel_akzent": "Simplon × Alex Müller.",
+    "aufgabe": "[Ein Satz: Was wollte Simplon zeigen?]",
+    "loesung": "[Ein Satz: Wie wurde es umgesetzt?]",
+    "ergebnis": "[Ein Satz: Was ist entstanden – Film, Clips, Fotos?]",
     "video": ""
   },
   "prozess": {
     "titel": "In fünf Schritten zum fertigen Video",
     "schritte": [
-      { "name": "Konzept", "text": "Ziel, Story, Drehplan." },
-      { "name": "Produktion", "text": "Dreh vor Ort." },
-      { "name": "Post", "text": "Schnitt, Grading, Ton." },
-      { "name": "Feedback", "text": "Zwei Korrekturschleifen." },
-      { "name": "Release", "text": "Export für alle Kanäle." }
+      {
+        "name": "Konzept",
+        "text": "Ziel, Story, Drehplan."
+      },
+      {
+        "name": "Produktion",
+        "text": "Dreh vor Ort."
+      },
+      {
+        "name": "Post",
+        "text": "Schnitt, Grading, Ton."
+      },
+      {
+        "name": "Feedback",
+        "text": "Zwei Korrekturschleifen."
+      },
+      {
+        "name": "Release",
+        "text": "Export für alle Kanäle."
+      }
     ]
   },
   "academy": {
-    "eyebrow": "Academy & Consulting",
-    "titel": "Sie wollen es selbst machen?",
-    "text": "Ich zeige Ihrem Team, wie gute Videos mit Smartphone und Bordmitteln entstehen. Als Workshop vor Ort oder als Coaching.",
-    "button": "Workshop anfragen"
+    "eyebrow": "KI-Enablement · THE LAB",
+    "titel": "KI sinnvoll nutzen – ohne Hype.",
+    "text": "Ich zeige Teams, wie sie KI im Content-Alltag einsetzen: von der Idee über Skript und Schnitt bis zu Untertiteln und Übersetzung. Aus der Praxis, mit Fokus auf datenschutzkonforme Tools aus der EU.",
+    "button": "Workshop anfragen",
+    "link": "/kontakt/?paket=THE%20LAB"
   },
   "roots": {
-    "eyebrow": "Roots & Passion",
+    "eyebrow": "Sport-DNA",
     "titel": "Wer bei 50 km/h den Fokus hält,",
     "titel_akzent": "verliert ihn auch in der Fertigungshalle nicht.",
     "bild": ""
@@ -65,5 +107,25 @@
     "titel": "Jetzt loslegen",
     "text": "Erzählen Sie mir in 15 Minuten, was Sie vorhaben. Kostenlos und unverbindlich.",
     "bild": ""
+  },
+  "leitprinzip": {
+    "eyebrow": "Das Prinzip",
+    "titel": "Ein Dreh,",
+    "titel_akzent": "alle Kanäle.",
+    "text": "Jede Produktion plane ich so, dass mehr als ein Film entsteht. Sie bekommen Content für Monate – aus einem Termin.",
+    "punkte": [
+      {
+        "titel": "Hauptfilm",
+        "text": "Das Video für Website, Messe, Vertrieb oder Intranet."
+      },
+      {
+        "titel": "Social-Clips",
+        "text": "Kurze Hochformat-Videos für Instagram, LinkedIn, TikTok und YouTube."
+      },
+      {
+        "titel": "Fotos",
+        "text": "Starke Bilder vom selben Dreh – für Presse, Website und Posts."
+      }
+    ]
   }
 }

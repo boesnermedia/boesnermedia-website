@@ -61,9 +61,10 @@ scripts: ["/assets/js/anfrage.js"]
       <fieldset class="only-neu group">
         <legend>Wofür interessieren Sie sich?</legend>
         <div class="chips">
-          {% for t in ["THE EXPLAINER", "THE CONTENT SPRINT", "THE MOMENTUM", "THE PODCAST", "Online-Kurs", "Academy & Workshop", "Noch unsicher"] %}
-          <label class="chip"><input type="radio" name="interesse" value="{{ t }}"><span>{{ t }}</span></label>
+          {% for p in startseite.pakete.liste %}
+          <label class="chip"><input type="radio" name="interesse" value="{{ p.name }}"><span>{{ p.feld }}</span></label>
           {% endfor %}
+          <label class="chip"><input type="radio" name="interesse" value="Noch unsicher"><span>Noch unsicher</span></label>
         </div>
         <p class="error" id="err-interesse" role="alert"></p>
       </fieldset>

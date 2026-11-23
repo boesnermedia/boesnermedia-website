@@ -1,6 +1,6 @@
 ---
 layout: paket.njk
-permalink: /loesungen/eventvideo/
+permalink: /dokumentation/
 title: "THE MOMENTUM – Eventvideo und Dokumentation im Doku-Style"
 description: "Eventvideo und Projektdokumentation aus Winnenden: Firmenfeiern, Go-Lives, Bauprojekte und Sport emotional im Doku-Style festgehalten. Komplettbetreuung von der Planung bis zum fertigen Film."
 name: THE MOMENTUM

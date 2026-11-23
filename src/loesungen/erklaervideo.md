@@ -1,6 +1,6 @@
 ---
 layout: paket.njk
-permalink: /loesungen/erklaervideo/
+permalink: /erklaervideos/
 title: "THE EXPLAINER – Erklärvideo für die Industrie"
 description: "Erklärvideo für Maschinenbau, Industrie und Software aus Winnenden: komplexe Technik in unter 180 Sekunden verständlich. Komplettbetreuung vom Skript bis zum fertigen Schnitt, in weniger als 4 Wochen."
 name: THE EXPLAINER

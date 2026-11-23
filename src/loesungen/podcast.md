@@ -1,6 +1,6 @@
 ---
 layout: paket.njk
-permalink: /loesungen/podcast/
+permalink: /unternehmenskommunikation/
 title: "THE PODCAST – Podcast-Produktion für Unternehmen"
 description: "Podcast-Produktion für Unternehmen aus Winnenden: Aufnahme bei Ihnen vor Ort, Schnitt und Mastering nach Sendestandard, auf Wunsch als Video-Podcast. Komplettservice von der Planung bis zur fertigen Folge."
 name: THE PODCAST

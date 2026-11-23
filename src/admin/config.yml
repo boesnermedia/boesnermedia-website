@@ -42,32 +42,37 @@ collections:
                 fields:
                   - { label: Firmenname, name: name, widget: string }
                   - { label: Logo, name: bild, widget: image }
-          - label: Pakete
+          - label: Leistungen
             name: pakete
             widget: object
             fields:
               - { label: Kleine Zeile, name: eyebrow, widget: string }
               - { label: Überschrift, name: titel, widget: string }
               - { label: Überschrift (Magenta), name: titel_akzent, widget: string }
-              - label: Pakete
+              - label: Leistungsfelder
                 name: liste
                 widget: list
                 fields:
-                  - { label: Name, name: name, widget: string }
-                  - { label: Zielgruppe, name: zielgruppe, widget: string }
+                  - { label: Leistungsfeld, name: feld, widget: string }
+                  - { label: Paketname, name: name, widget: string }
                   - { label: Versprechen, name: versprechen, widget: string }
                   - { label: Vorschauvideo (5 Sek.), name: video, widget: file, required: false }
                   - { label: Link zur Paketseite, name: link, widget: string, required: false }
-                  - { label: Nicht auf der Startseite zeigen, name: nur_unterseiten, widget: boolean, required: false }
-              - { label: Linktext unter den Paketen, name: link_text, widget: string }
-              - { label: Linkziel unter den Paketen, name: link_ziel, widget: string, required: false }
-          - label: Zahlen
-            name: zahlen
-            widget: list
+                  - { label: Nicht als Karte zeigen, name: nur_unterseiten, widget: boolean, required: false }
+          - label: Ein Dreh, alle Kanäle
+            name: leitprinzip
+            widget: object
             fields:
-              - { label: Zahl, name: wert, widget: string }
-              - { label: Einheit, name: einheit, widget: string, required: false }
-              - { label: Text, name: text, widget: string }
+              - { label: Kleine Zeile, name: eyebrow, widget: string }
+              - { label: Überschrift, name: titel, widget: string }
+              - { label: Überschrift (Magenta), name: titel_akzent, widget: string }
+              - { label: Text, name: text, widget: text }
+              - label: Punkte
+                name: punkte
+                widget: list
+                fields:
+                  - { label: Titel, name: titel, widget: string }
+                  - { label: Text, name: text, widget: string }
           - label: Ausgewähltes Projekt
             name: projekt
             widget: object
@@ -90,7 +95,7 @@ collections:
                 fields:
                   - { label: Name, name: name, widget: string }
                   - { label: Text, name: text, widget: string }
-          - label: Academy
+          - label: THE LAB (KI-Workshops)
             name: academy
             widget: object
             fields:
@@ -98,6 +103,7 @@ collections:
               - { label: Überschrift, name: titel, widget: string }
               - { label: Text, name: text, widget: text }
               - { label: Button, name: button, widget: string }
+              - { label: Link, name: link, widget: string, required: false }
           - label: Roots & Passion
             name: roots
             widget: object

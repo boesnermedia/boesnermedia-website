@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Bösner Media
-description: Videoproduktion für Industrie, Handel und Sport aus Winnenden – Rems-Murr-Kreis und Region Stuttgart. Explainer, Social-Media-Content, Doku und Podcast.
+description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken aus Winnenden – Dokumentation, technische Erklärvideos, Social Media Content, Unternehmenskommunikation und KI-Workshops.
 ---
 {% set s = startseite %}
 
@@ -46,31 +46,33 @@ description: Videoproduktion für Industrie, Handel und Sport aus Winnenden – 
       <span class="eyebrow">{{ s.pakete.eyebrow }}</span>
       <h2 id="pakete-titel" class="h-display">{{ s.pakete.titel }} <span class="brand">{{ s.pakete.titel_akzent }}</span></h2>
     </div>
-    <div class="cards">
+    <div class="cards cards-2">
       {% for p in s.pakete.liste %}{% if not p.nur_unterseiten %}
       <article class="card">
         <div class="card-media">
           {% if p.video %}<video src="{{ p.video }}" muted loop playsinline preload="none" aria-hidden="true"></video>{% else %}<span class="placeholder">[Vorschau 5 Sek.]</span>{% endif %}
         </div>
-        <span class="eyebrow plain">{{ p.zielgruppe }}</span>
-        <h3 class="h-package">{{ p.name }}</h3>
+        <span class="eyebrow plain">{{ p.name }}</span>
+        <h3 class="h-package" style="text-transform: none; letter-spacing: 0">{{ p.feld }}</h3>
         <p>{{ p.versprechen }}</p>
-        {% if p.link %}<a class="link" href="{{ p.link }}" aria-label="Mehr zu {{ p.name }}">Zum Paket</a>{% else %}<a class="link" href="/kontakt/?paket={{ p.name | urlencode }}" aria-label="{{ p.name }} anfragen">Anfragen</a>{% endif %}
+        <a class="link" href="{{ p.link }}" aria-label="Mehr zu {{ p.feld }}">Mehr erfahren</a>
       </article>
       {% endif %}{% endfor %}
     </div>
-    <p style="margin: 32px 0 0"><a class="tap muted" href="{{ s.pakete.link_ziel or '/kontakt/' }}" style="text-decoration: none; font-size: 14px; font-weight: 500">{{ s.pakete.link_text }} →</a></p>
+    <p style="margin: 32px 0 0"><a class="tap muted" href="#lab" style="text-decoration: none; font-size: 14px; font-weight: 500">Außerdem: KI-Workshops für Ihr Team →</a></p>
   </div>
 </section>
 
-<section class="section light" aria-label="Kennzahlen" style="padding: 80px 0">
+<section class="section light" aria-labelledby="prinzip-titel">
   <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">{{ s.leitprinzip.eyebrow }}</span>
+      <h2 id="prinzip-titel" class="h-display">{{ s.leitprinzip.titel }} <span class="brand">{{ s.leitprinzip.titel_akzent }}</span></h2>
+      <p class="lead" style="margin: 0; max-width: 640px">{{ s.leitprinzip.text }}</p>
+    </div>
     <div class="numbers">
-      {% for z in s.zahlen %}
-      <div>
-        <div class="number"><span class="number-value">{{ z.wert }}</span>{% if z.einheit %}<span class="number-unit">{{ z.einheit }}</span>{% endif %}</div>
-        <p>{{ z.text }}</p>
-      </div>
+      {% for pt in s.leitprinzip.punkte %}
+      <div><div class="step-n">{{ "0" if loop.index < 10 }}{{ loop.index }}</div><h3 style="font-size: 22px; line-height: 28px; margin-top: 8px">{{ pt.titel }}</h3><p>{{ pt.text }}</p></div>
       {% endfor %}
     </div>
   </div>
@@ -107,14 +109,14 @@ description: Videoproduktion für Industrie, Handel und Sport aus Winnenden – 
   </div>
 </section>
 
-<section id="academy" class="academy accent" aria-labelledby="academy-titel">
+<section id="lab" class="academy accent" aria-labelledby="academy-titel">
   <div class="wrap">
     <div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
       <span class="eyebrow plain" style="color: #fff">{{ s.academy.eyebrow }}</span>
       <h2 id="academy-titel" class="h-display">{{ s.academy.titel }}</h2>
       <p style="margin: 0; font-size: 18px; line-height: 30px">{{ s.academy.text }}</p>
     </div>
-    <a class="btn btn-primary" href="/kontakt/">{{ s.academy.button }}</a>
+    <a class="btn btn-primary" href="{{ s.academy.link or '/kontakt/' }}">{{ s.academy.button }}</a>
   </div>
 </section>
 
