@@ -181,7 +181,7 @@ layout: base.njk
 <div class="reel" id="reel" role="dialog" aria-modal="true" aria-label="Beispielvideo {{ feld or name }}" hidden>
   <div class="reel-inner" style="display: flex; flex-direction: column; gap: 16px">
     <button type="button" class="btn btn-secondary reel-close dark" style="background: none" data-reel-close>✕ Schließen</button>
-    <div class="reel-player"><video src="{{ video }}" {% if video_poster %}poster="{{ video_poster }}"{% endif %} controls playsinline preload="none" style="width: 100%; height: 100%"></video></div>
+    <div class="reel-player{% if video_hochkant %} reel-hochkant{% endif %}"><video src="{{ video }}" {% if video_poster %}poster="{{ video_poster }}"{% endif %} controls playsinline preload="none" style="width: 100%; height: 100%"></video></div>
   </div>
 </div>
 {% endif %}

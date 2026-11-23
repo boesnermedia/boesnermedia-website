@@ -38,8 +38,9 @@
         "feld": "Social Media Content",
         "name": "THE CONTENT SPRINT",
         "versprechen": "Ein Drehtag, ein Monat Content.",
-        "video": "",
-        "link": "/social-media/"
+        "video": "/assets/uploads/social-vorschau.mp4",
+        "link": "/social-media/",
+        "bild": "/assets/uploads/social-vorschau.jpg"
       },
       {
         "feld": "Unternehmens­kommunikation",

@@ -340,3 +340,4 @@ html, body { overflow-x: clip; }
 .hero .wrap { pointer-events: none; }
 .hero .wrap .hero-text { pointer-events: auto; }
 .skew-media video, .skew-media img, .hero-play img { max-width: none; }
+.reel-player.reel-hochkant { aspect-ratio: 9 / 16; width: auto; height: min(80vh, 720px); margin: 0 auto; background: #000; }

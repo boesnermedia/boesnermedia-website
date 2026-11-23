@@ -187,6 +187,7 @@ collections:
       - { label: Einleitung, name: intro, widget: text }
       - { label: Beispielvideo, name: video, widget: file, required: false }
       - { label: Vorschaubild zum Video, name: video_poster, widget: image, required: false }
+      - { label: Video ist Hochformat, name: video_hochkant, widget: boolean, required: false }
       - { label: Bild (wenn kein Video), name: bild, widget: image, required: false }
       - { label: Überschrift Ziele, name: ziel_titel, widget: string }
       - label: Ziele

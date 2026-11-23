@@ -9,7 +9,9 @@ kurzname: Content Sprint
 eyebrow: "Social Media Content · Marken, Händler, Employer Branding"
 claim: "Ein Drehtag, ein Monat Content."
 intro: "Sie wissen, dass Sie auf Social Media regelmäßig sichtbar sein müssen – aber Ihnen fehlt die Zeit zum ständigen Filmen. Ich drehe an einem Tag Videos in Serie, und Ihr Feed ist für Wochen gefüllt."
-video: ""
+video: "/assets/uploads/social-reel-simplon.mp4"
+video_poster: "/assets/uploads/social-reel-simplon.jpg"
+video_hochkant: true
 ziel_titel: "Wofür Unternehmen den Content Sprint einsetzen"
 ziele:
   - titel: Sichtbar bleiben
@@ -91,7 +93,7 @@ bausteine:
     text: "Untertitel oder KI-Übersetzung, pro Sprache."
   - name: Air-Modul
     text: "Drohnenaufnahmen für den besonderen Blick von oben."
-beispiel: ""
+beispiel: "Aus dem Simplon-Dreh in New York entstanden neben der Doku 4 Trailer und 6 Social-Clips im Hochformat – vom POV-Sprint bis zum Getting-Ready. Ein Dreh, alle Kanäle."
 faq:
   - frage: "Wie viele Videos entstehen an einem Drehtag?"
     antwort: "Im Standard zehn. Weil Skripte und Drehplan vorher stehen, drehen wir alle Videos am Stück. Größere Pakete mit bis zu 30 Videos sind möglich."
