@@ -43,6 +43,20 @@ await Promise.all(Array.from({ length: 8 }, async () => {
 console.log("Hochladen fertig.");
 
 if (apiKey && pullZoneId) {
+  // Browser sollen Seiten höchstens 10 Minuten zwischenspeichern, sonst sehen Besucher alte Versionen
+  try {
+    const zoneUrl = `https://api.bunny.net/pullzone/${pullZoneId}`;
+    const zone = await (await fetch(zoneUrl, { headers: { AccessKey: apiKey, Accept: "application/json" } })).json();
+    if (zone.CacheControlPublicMaxAgeOverride !== 600) {
+      const upd = await fetch(zoneUrl, { method: "POST", headers: { AccessKey: apiKey, "Content-Type": "application/json" }, body: JSON.stringify({ CacheControlPublicMaxAgeOverride: 600 }) });
+      console.log(upd.ok ? "Browser-Cache auf 10 Minuten gesetzt." : `Browser-Cache konnte nicht gesetzt werden: ${upd.status}`);
+    } else {
+      console.log("Browser-Cache steht auf 10 Minuten.");
+    }
+  } catch (e) {
+    console.log("Hinweis: Browser-Cache-Einstellung nicht geprüft:", e.message);
+  }
+
   const res = await fetch(`https://api.bunny.net/pullzone/${pullZoneId}/purgeCache`, { method: "POST", headers: { AccessKey: apiKey } });
   if (res.ok) {
     console.log("CDN-Cache geleert, neue Version ist online.");

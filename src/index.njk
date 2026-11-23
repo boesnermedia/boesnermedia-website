@@ -144,10 +144,12 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
       <span class="eyebrow">Kontakt</span>
       <h2 id="kontakt-titel" class="h-display">{{ s.kontakt.titel }}<span class="brand">.</span></h2>
       <p class="lead">{{ s.kontakt.text }}</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; margin-top: 8px">
+      <div class="kontakt-aktionen">
         <a class="btn btn-primary" href="/kontakt/">Potenzial-Analyse buchen</a>
-        <a class="link" style="text-transform: none; letter-spacing: 0; font-size: 14px" href="tel:{{ site.telefon_link }}">{{ site.telefon }}</a>
-        <a class="link" style="text-transform: none; letter-spacing: 0; font-size: 14px" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <div class="kontakt-direkt">
+          <a class="link" href="tel:{{ site.telefon_link }}">{{ site.telefon }}</a>
+          <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </div>
       </div>
     </div>
   </div>

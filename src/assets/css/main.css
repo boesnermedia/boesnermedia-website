@@ -315,3 +315,7 @@ html, body { overflow-x: clip; }
   .section-head { margin-bottom: 40px; }
   .h-paket .claim { margin-top: 12px; }
 }
+
+.kontakt-aktionen { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; margin-top: 8px; }
+.kontakt-direkt { display: flex; flex-wrap: wrap; gap: 8px 32px; }
+.kontakt-direkt .link { text-transform: none; letter-spacing: 0; font-size: 15px; }
