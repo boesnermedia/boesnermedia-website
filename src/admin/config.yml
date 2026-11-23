@@ -58,7 +58,9 @@ collections:
                   - { label: Versprechen, name: versprechen, widget: string }
                   - { label: Vorschauvideo (5 Sek.), name: video, widget: file, required: false }
                   - { label: Link zur Paketseite, name: link, widget: string, required: false }
+                  - { label: Nicht auf der Startseite zeigen, name: nur_unterseiten, widget: boolean, required: false }
               - { label: Linktext unter den Paketen, name: link_text, widget: string }
+              - { label: Linkziel unter den Paketen, name: link_ziel, widget: string, required: false }
           - label: Zahlen
             name: zahlen
             widget: list

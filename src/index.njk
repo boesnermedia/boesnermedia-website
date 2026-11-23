@@ -47,7 +47,7 @@ description: Videoproduktion für Industrie, Handel und Sport aus Winnenden – 
       <h2 id="pakete-titel" class="h-display">{{ s.pakete.titel }} <span class="brand">{{ s.pakete.titel_akzent }}</span></h2>
     </div>
     <div class="cards">
-      {% for p in s.pakete.liste %}
+      {% for p in s.pakete.liste %}{% if not p.nur_unterseiten %}
       <article class="card">
         <div class="card-media">
           {% if p.video %}<video src="{{ p.video }}" muted loop playsinline preload="none" aria-hidden="true"></video>{% else %}<span class="placeholder">[Vorschau 5 Sek.]</span>{% endif %}
@@ -57,9 +57,9 @@ description: Videoproduktion für Industrie, Handel und Sport aus Winnenden – 
         <p>{{ p.versprechen }}</p>
         {% if p.link %}<a class="link" href="{{ p.link }}" aria-label="Mehr zu {{ p.name }}">Zum Paket</a>{% else %}<a class="link" href="/kontakt/?paket={{ p.name | urlencode }}" aria-label="{{ p.name }} anfragen">Anfragen</a>{% endif %}
       </article>
-      {% endfor %}
+      {% endif %}{% endfor %}
     </div>
-    <p style="margin: 32px 0 0"><a class="tap muted" href="/kontakt/" style="text-decoration: none; font-size: 14px; font-weight: 500">{{ s.pakete.link_text }} →</a></p>
+    <p style="margin: 32px 0 0"><a class="tap muted" href="{{ s.pakete.link_ziel or '/kontakt/' }}" style="text-decoration: none; font-size: 14px; font-weight: 500">{{ s.pakete.link_text }} →</a></p>
   </div>
 </section>
 
