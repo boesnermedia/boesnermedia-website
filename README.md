@@ -25,7 +25,7 @@ Die Website von Bösner Media. Gebaut mit Claude, gepflegt über das CMS unter *
 - [x] Grundstruktur, Startseite, Kontakt mit Anfrageformular, Impressum und Datenschutz als Platzhalter
 - [x] Automatisches Veröffentlichen bei Bunny (`.github/workflows/deploy.yml`)
 - [ ] Domain boesnermedia.de bei Wix auf Bunny zeigen lassen
-- [ ] Formular-Server: Skript `google-apps-script/Anfrage.gs` in Google Workspace bereitstellen, Web-App-Adresse in `src/_data/site.json` eintragen
+- [x] Formular-Server: Skript `google-apps-script/Anfrage.gs` läuft in Google Workspace (Projekt „Website-Anfragen“)
 - [ ] Inhalte: Showreel, Fotos, Kundenlogos, echte Kennzahl, Impressum und Datenschutzerklärung
 
 ## Für Entwickler
