@@ -2,11 +2,11 @@
 layout: paket.njk
 permalink: /loesungen/erklaervideo/
 title: "THE EXPLAINER – Erklärvideo für die Industrie"
-description: "Erklärvideos für Industrie, Maschinenbau und Software aus Winnenden: komplexe Technik in unter 180 Sekunden verständlich. Komplettbetreuung vom Briefing bis zum fertigen Schnitt."
+description: "Erklärvideo für Maschinenbau, Industrie und Software aus Winnenden: komplexe Technik in unter 180 Sekunden verständlich. Komplettbetreuung vom Skript bis zum fertigen Schnitt, in weniger als 4 Wochen."
 name: THE EXPLAINER
 eyebrow: "Paket · Industrie, Maschinenbau, Software"
 claim: "Komplexe Technik in unter 180 Sekunden verstanden."
-intro: "Ein Erklärvideo, das Ihren Vertrieb beschleunigt und Ihren Support entlastet. Sie bekommen alles aus einer Hand – vom ersten Briefing bis zum fertigen Schnitt."
+intro: "Ein Erklärvideo für Maschinenbau, Industrie und Software, das Ihren Vertrieb beschleunigt und Ihren Support entlastet. Alles aus einer Hand – vom Skript bis zum fertigen Schnitt."
 video: ""
 ziel_titel: "Wofür Unternehmen den Explainer einsetzen"
 ziele:
@@ -17,12 +17,24 @@ ziele:
   - titel: Prozesse sichern
     text: "Anwendung und Bedienung bleiben verständlich, auch für neue Mitarbeiter."
 zielgruppe: "Industrie, Maschinenbauer und Software-Anbieter"
+dauer: "weniger als 4 Wochen"
+aufwand:
+  - titel: "30 Minuten Briefing"
+    text: "Ein Video-Call, in dem wir Ziel und Kernbotschaften festlegen."
+  - titel: "Skript freigeben"
+    text: "Sie lesen das Skript und geben es frei oder sagen, was fehlt."
+  - titel: "Ein Ansprechpartner am Drehtag"
+    text: "Jemand, der Zugang zu Halle und Maschinen hat – mehr nicht."
+  - titel: "Gebündeltes Feedback"
+    text: "Zwei Korrekturschleifen, am besten mit einer Rückmeldung pro Runde."
 phasen:
   - titel: Pre-Production
     untertitel: Strategie
     leistungen:
       - name: Remote-Briefing
         text: "30 Minuten Video-Call: visuelle Ziele, Key-Messages und Inhalte vor dem Dreh."
+      - name: Skript & Storyboard
+        text: "Ich schreibe das Skript und plane jede Szene – Sie geben nur frei."
       - name: Drehplan
         text: "Effiziente Shot-List, damit der Dreh Ihren Betrieb so wenig wie möglich stört."
   - titel: Production
@@ -46,13 +58,17 @@ phasen:
       - name: Musik & Rechte
         text: "Lizenzierte Musik für die vereinbarten Kanäle."
 inklusive:
-  - "Komplettbetreuung vom Briefing bis zum fertigen Schnitt"
+  - "Komplettbetreuung vom Skript bis zum fertigen Schnitt"
+  - "Ein fertiges Hauptvideo als hochauflösende MP4-Datei"
+  - "Fertig in weniger als 4 Wochen"
   - "Lizenzierte Musik für die kommerzielle Nutzung"
   - "Zwei Korrekturschleifen"
   - "Zeitlich unbegrenzte Nutzungsrechte"
   - "Anfahrt bis 25 km inklusive"
 bausteine_text: "Jedes Projekt wird aus Bausteinen zusammengestellt. Sie wählen, was Ihr Video zusätzlich braucht – wir klären das im Erstgespräch."
 bausteine:
+  - name: Cut-Downs
+    text: "Kurzversionen aus dem Hauptvideo, z. B. im Hochformat für Social Media oder als Messe-Loop."
   - name: Air-Modul
     text: "Drohnenaufnahmen innen und außen, inklusive Prüfung von Flugzonen und Genehmigungen."
   - name: Sprecher
@@ -61,8 +77,12 @@ bausteine:
     text: "KI-gestützte Übersetzung mit Lippenanpassung, pro Sprache."
   - name: Untertitel
     text: "Synchron erstellte und eingebrannte Untertitel."
-beispiel: "[Beispielprojekt nach Freigabe des Kunden]"
+beispiel: ""
 faq:
+  - frage: "Wie lange dauert ein Explainer?"
+    antwort: "Vom Briefing bis zum fertigen Video vergehen weniger als 4 Wochen. Den genauen Zeitplan legen wir im Briefing fest."
+  - frage: "Wer schreibt das Skript?"
+    antwort: "Ich. Sie liefern im Briefing die Inhalte, ich mache daraus ein Skript mit Storyboard. Sie geben es frei, bevor gedreht wird."
   - frage: "Muss mein Betrieb für den Dreh stillstehen?"
     antwort: "Nein. Ich drehe als One-Man-Squad mit mobilem Licht und plane die Shot-List so, dass laufende Prozesse möglichst nicht gestört werden."
   - frage: "Wie viele Korrekturen sind enthalten?"
@@ -70,7 +90,7 @@ faq:
   - frage: "Darf ich das Video überall einsetzen?"
     antwort: "Ja. Die Nutzungsrechte sind zeitlich unbegrenzt, die Musik ist für die vereinbarten Kanäle lizenziert."
   - frage: "In welchem Format bekomme ich das Video?"
-    antwort: "Als hochauflösende MP4-Datei. Weitere Formate wie Hochformat für Social Media oder 4K sind nach Absprache möglich."
+    antwort: "Sie bekommen ein Hauptvideo als hochauflösende MP4-Datei. Kurzversionen, etwa im Hochformat für Social Media, gibt es als Baustein Cut-Downs dazu."
   - frage: "Was kostet ein Explainer?"
     antwort: "Das hängt von den Bausteinen ab, die Ihr Video braucht. In der kostenlosen Potenzial-Analyse klären wir das und Sie bekommen danach ein Festpreis-Angebot."
 ---

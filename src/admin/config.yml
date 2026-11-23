@@ -152,6 +152,7 @@ collections:
           - { label: Titel, name: titel, widget: string }
           - { label: Text, name: text, widget: string }
       - { label: Zielgruppe, name: zielgruppe, widget: string }
+      - { label: Dauer bis zum fertigen Video, name: dauer, widget: string, required: false }
       - label: Phasen
         name: phasen
         widget: list
@@ -164,6 +165,13 @@ collections:
             fields:
               - { label: Name, name: name, widget: string }
               - { label: Text, name: text, widget: string }
+      - label: Aufwand für den Kunden
+        name: aufwand
+        widget: list
+        required: false
+        fields:
+          - { label: Titel, name: titel, widget: string }
+          - { label: Text, name: text, widget: string }
       - { label: Immer inklusive, name: inklusive, widget: list }
       - { label: Text zu den Bausteinen, name: bausteine_text, widget: text }
       - label: Bausteine
@@ -172,7 +180,8 @@ collections:
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Text, name: text, widget: string }
-      - { label: Beispielprojekt, name: beispiel, widget: text }
+      - { label: Beispielprojekt (leer = Abschnitt ausgeblendet), name: beispiel, widget: text, required: false }
+      - { label: Vorschaubild für LinkedIn/WhatsApp (1200×630), name: og_bild, widget: image, required: false }
       - label: Häufige Fragen
         name: faq
         widget: list
