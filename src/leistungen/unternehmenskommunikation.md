@@ -4,7 +4,7 @@ permalink: /unternehmenskommunikation/
 title: "Unternehmenskommunikation – THE STATEMENT"
 description: "Videos für interne Kommunikation aus Winnenden: Statements und Interviews der Geschäftsführung, Betriebsversammlungs-Videos in mehreren Sprachen und Podcasts für Unternehmen."
 name: THE STATEMENT
-feld: Unternehmenskommunikation
+feld: "Unternehmens­kommunikation"
 kurzname: Statement
 eyebrow: "Unternehmenskommunikation · Führung, HR, interne Kommunikation"
 claim: "Klare Botschaften aus der Führungsebene."
