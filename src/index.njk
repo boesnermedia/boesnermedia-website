@@ -34,14 +34,16 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
   </div>
 </section>
 
+{% if s.kunden.logos and s.kunden.logos.length %}
 <section class="clients deep dark" aria-label="Kunden">
   <div class="wrap">
     <span class="small muted">{{ s.kunden.zeile }}</span>
     <div class="clients-logos">
-      {% for logo in s.kunden.logos %}<img src="{{ logo.bild }}" alt="{{ logo.name }}" loading="lazy">{% else %}<span class="placeholder" style="padding: 0">[Kundenlogos nach Freigabe]</span>{% endfor %}
+      {% for logo in s.kunden.logos %}<img src="{{ logo.bild }}" alt="{{ logo.name }}" loading="lazy">{% endfor %}
     </div>
   </div>
 </section>
+{% endif %}
 
 <section id="loesungen" class="section dark" aria-labelledby="pakete-titel">
   <div class="wrap">
@@ -161,7 +163,7 @@ description: Video, Content und KI-Know-how für Industrie- und Outdoor-Marken a
   <div class="reel-inner" style="display: flex; flex-direction: column; gap: 16px">
     <button type="button" class="btn btn-secondary reel-close dark" style="background: none" data-reel-close>✕ Schließen</button>
     <div class="reel-player">
-      {% if s.hero.showreel_video %}<video src="{{ s.hero.showreel_video }}" controls preload="none" style="width: 100%; height: 100%"></video>{% else %}<span class="placeholder">[Showreel 60–90 Sek. mit Ton und Untertiteln]</span>{% endif %}
+      {% if s.hero.showreel_video %}<video src="{{ s.hero.showreel_video }}" {% if s.hero.showreel_poster %}poster="{{ s.hero.showreel_poster }}"{% endif %} controls playsinline preload="none" style="width: 100%; height: 100%"></video>{% else %}<span class="placeholder">[Showreel 60–90 Sek. mit Ton und Untertiteln]</span>{% endif %}
     </div>
   </div>
 </div>
