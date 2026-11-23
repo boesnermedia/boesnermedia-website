@@ -62,7 +62,7 @@ if (apiKey && pullZoneId) {
     const { liste } = JSON.parse(await readFile(new URL("../src/_data/weiterleitungen.json", import.meta.url), "utf8"));
     const zoneUrl = `https://api.bunny.net/pullzone/${pullZoneId}`;
     const zone = await (await fetch(zoneUrl, { headers: { AccessKey: apiKey, Accept: "application/json" } })).json();
-    const soll = new Set(liste.map((w) => `Weiterleitung ${w.von} -> ${w.nach}`));
+    const soll = new Set(liste.map((w) => `Weiterleitung ${w.von} -> ${w.nach} (v2)`));
     // Veraltete Weiterleitungen entfernen (z. B. wenn ein Ziel geändert wurde)
     for (const r of zone.EdgeRules || []) {
       if ((r.Description || "").startsWith("Weiterleitung ") && !soll.has(r.Description)) {
@@ -72,7 +72,7 @@ if (apiKey && pullZoneId) {
     const vorhanden = new Set((zone.EdgeRules || []).map((r) => r.Description));
     let neu = 0;
     for (const w of liste) {
-      const name = `Weiterleitung ${w.von} -> ${w.nach}`;
+      const name = `Weiterleitung ${w.von} -> ${w.nach} (v2)`;
       if (vorhanden.has(name)) continue;
       const pfad = w.von.replace(/\/$/, "");
       const regel = {
@@ -80,7 +80,8 @@ if (apiKey && pullZoneId) {
         ActionParameter1: `https://%{Url.Hostname}${w.nach}`, // gleiche Domain, neue Seite
         ActionParameter2: "301",
         TriggerMatchingType: 0, // eine Bedingung reicht
-        Triggers: [{ Type: 0, PatternMatches: [`*://*${pfad}`, `*://*${pfad}/`], PatternMatchingType: 0, Parameter1: "" }],
+        // Variante mit Schrägstrich nur, wenn sie nicht selbst das Ziel ist (sonst Endlosschleife)
+        Triggers: [{ Type: 0, PatternMatches: `${pfad}/` === w.nach ? [`*://*${pfad}`] : [`*://*${pfad}`, `*://*${pfad}/`], PatternMatchingType: 0, Parameter1: "" }],
         Description: name,
         Enabled: true
       };
