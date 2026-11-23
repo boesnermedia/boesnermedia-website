@@ -40,6 +40,22 @@
     if (e.target.name === "anliegen") showError("err-anliegen", null, "");
   });
 
+  // Sofortige Rückmeldung, sobald ein Feld verlassen oder korrigiert wird
+  var feldRegeln = {
+    "f-name": ["err-name", function (v) { return v ? "" : "Bitte geben Sie Ihren Namen ein."; }],
+    "f-firma": ["err-firma", function (v) { return v ? "" : "Bitte geben Sie Ihr Unternehmen ein."; }],
+    "f-mail": ["err-mail", function (v) { return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v) ? "" : "Bitte prüfen Sie die E-Mail-Adresse, z. B. name@firma.de."; }],
+    "f-msg": ["err-msg", function (v) { return v ? "" : "Ein, zwei Sätze reichen."; }]
+  };
+  Object.keys(feldRegeln).forEach(function (id) {
+    var el = document.getElementById(id);
+    var regel = feldRegeln[id];
+    el.addEventListener("blur", function () { if (el.value.trim()) showError(regel[0], id, regel[1](el.value.trim())); });
+    el.addEventListener("input", function () {
+      if (el.getAttribute("aria-invalid") === "true" && !regel[1](el.value.trim())) showError(regel[0], id, "");
+    });
+  });
+
   function validate() {
     var typ = val("kundentyp");
     var errors = [];
@@ -52,6 +68,9 @@
     if (typ === "Neukunde") checks.unshift(["err-interesse", null, val("interesse") ? "" : "Bitte wählen Sie, wofür Sie sich interessieren."]);
     if (typ === "Bestandskunde") checks.unshift(["err-anliegen", null, val("anliegen") ? "" : "Bitte wählen Sie, worum es geht."]);
     checks.forEach(function (c) { showError(c[0], c[1], c[2]); if (c[2]) errors.push(c); });
+    showError("err-senden", null, errors.length
+      ? (errors.length === 1 ? "Bitte prüfen Sie das markierte Feld." : "Bitte prüfen Sie die " + errors.length + " markierten Felder.")
+      : "");
     if (errors.length) {
       var first = errors[0][1] ? document.getElementById(errors[0][1]) : form.querySelector(typ === "Neukunde" ? 'input[name="interesse"]' : 'input[name="anliegen"]');
       if (first) first.focus();

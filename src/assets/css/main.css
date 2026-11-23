@@ -184,7 +184,9 @@ form:has(input[name="kundentyp"]:checked) .before-type { display: none; }
 .field label { font-size: 12px; font-weight: 700; letter-spacing: 1.7px; text-transform: uppercase; }
 .field label small { font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--navy-500); font-size: 12px; }
 .field input, .field select, .field textarea { font: 17px var(--font); color: var(--navy-900); background: var(--white); border: 1.5px solid var(--navy-500); border-radius: 0; padding: 12px 14px; min-height: 48px; width: 100%; }
-.field [aria-invalid="true"] { border-color: var(--magenta-600); }
+.field [aria-invalid="true"] { border: 2px solid var(--magenta-600); background: var(--magenta-50); }
+.form-card input, .form-card textarea, .form-card select, .form-card fieldset { scroll-margin-top: 120px; }
+#err-senden:not(:empty) { padding: 12px 14px; background: var(--magenta-50); border-left: 4px solid var(--magenta-600); }
 .hint { font-size: 13px; line-height: 20px; color: var(--navy-500); margin: 0; }
 .error { display: flex; gap: 6px; align-items: center; margin: 0; font-size: 13px; font-weight: 700; color: var(--magenta-600); }
 .error::before { content: "!"; display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 50%; background: var(--magenta-600); color: var(--white); font-size: 11px; }
