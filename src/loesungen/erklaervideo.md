@@ -4,6 +4,7 @@ permalink: /loesungen/erklaervideo/
 title: "THE EXPLAINER – Erklärvideo für die Industrie"
 description: "Erklärvideo für Maschinenbau, Industrie und Software aus Winnenden: komplexe Technik in unter 180 Sekunden verständlich. Komplettbetreuung vom Skript bis zum fertigen Schnitt, in weniger als 4 Wochen."
 name: THE EXPLAINER
+kurzname: Explainer
 eyebrow: "Paket · Industrie, Maschinenbau, Software"
 claim: "Komplexe Technik in unter 180 Sekunden verstanden."
 intro: "Ein Erklärvideo für Maschinenbau, Industrie und Software, das Ihren Vertrieb beschleunigt und Ihren Support entlastet. Alles aus einer Hand – vom Skript bis zum fertigen Schnitt."

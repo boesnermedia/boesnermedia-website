@@ -38,7 +38,7 @@ layout: base.njk
       <span class="eyebrow">{{ eyebrow }}</span>
       <h1 id="paket-titel" class="h-paket">{{ name }}<br><span class="brand">{{ claim }}</span></h1>
       <p class="lead">{{ intro }}</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="{{ anfrage }}">{{ name | replace("THE ", "") | lower | capitalize }} anfragen</a></div>
+      <div class="hero-actions"><a class="btn btn-primary" href="{{ anfrage }}">{{ kurzname or name }} anfragen</a></div>
     </div>
   </div>
 </section>
@@ -61,8 +61,8 @@ layout: base.njk
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Komplettbetreuung</span>
-      <h2 id="ablauf-titel" class="h-display">So entsteht Ihr Video<span class="brand">.</span></h2>
-      {% if dauer %}<p class="lead" style="margin: 0">Vom Briefing bis zum fertigen Video: <strong>{{ dauer }}</strong>.</p>{% endif %}
+      <h2 id="ablauf-titel" class="h-display">{{ ablauf_titel or "So entsteht Ihr Video" }}<span class="brand">.</span></h2>
+      {% if dauer and dauer[0] != "[" %}<p class="lead" style="margin: 0">Vom Briefing bis zum fertigen Video: <strong>{{ dauer }}</strong>.</p>{% endif %}
     </div>
     <div class="cards">
       {% for ph in phasen %}
@@ -135,7 +135,7 @@ layout: base.njk
   <div class="wrap">
     <div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
       <span class="eyebrow plain" style="color: #fff">Nächster Schritt</span>
-      <h2 id="cta-titel" class="h-display">Lassen Sie uns über Ihr Video sprechen.</h2>
+      <h2 id="cta-titel" class="h-display">{{ cta_titel or "Lassen Sie uns über Ihr Projekt sprechen." }}</h2>
       <p style="margin: 0; font-size: 18px; line-height: 30px">In der kostenlosen Potenzial-Analyse klären wir Ziel, Bausteine und Ablauf. Danach bekommen Sie ein Festpreis-Angebot.</p>
       <p style="margin: 0; font-weight: 700">Antwort {{ site.antwortzeit }} – versprochen.</p>
     </div>

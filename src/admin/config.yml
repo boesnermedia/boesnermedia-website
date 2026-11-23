@@ -140,6 +140,7 @@ collections:
       - { label: Seitentitel (Google), name: title, widget: string }
       - { label: Beschreibung (Google), name: description, widget: text }
       - { label: Paketname, name: name, widget: string }
+      - { label: Kurzname (für Buttons), name: kurzname, widget: string, required: false }
       - { label: Kleine Zeile oben, name: eyebrow, widget: string }
       - { label: Versprechen, name: claim, widget: string }
       - { label: Einleitung, name: intro, widget: text }
@@ -153,6 +154,8 @@ collections:
           - { label: Text, name: text, widget: string }
       - { label: Zielgruppe, name: zielgruppe, widget: string }
       - { label: Dauer bis zum fertigen Video, name: dauer, widget: string, required: false }
+      - { label: Überschrift Ablauf, name: ablauf_titel, widget: string, required: false }
+      - { label: Überschrift Abschluss, name: cta_titel, widget: string, required: false }
       - label: Phasen
         name: phasen
         widget: list
