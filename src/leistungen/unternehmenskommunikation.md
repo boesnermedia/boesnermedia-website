@@ -10,6 +10,7 @@ eyebrow: "Unternehmenskommunikation · Führung, HR, interne Kommunikation"
 claim: "Klare Botschaften aus der Führungsebene."
 intro: "Wenn die Geschäftsführung etwas zu sagen hat, muss es ankommen – bei allen Mitarbeitern, an allen Standorten. Ich produziere Statements, Interviews und Podcasts, die professionell wirken und verstanden werden."
 video: ""
+bild: "/assets/uploads/statement-setup.jpg"
 ziel_titel: "Wofür Unternehmen THE STATEMENT einsetzen"
 ziele:
   - titel: Führung sichtbar machen
