@@ -57,6 +57,34 @@ if (apiKey && pullZoneId) {
     console.log("Hinweis: Browser-Cache-Einstellung nicht geprüft:", e.message);
   }
 
+  // Weiterleitungen alter Adressen (301) als Bunny-Edge-Regeln pflegen – nur fehlende neu anlegen
+  try {
+    const { liste } = JSON.parse(await readFile(new URL("../src/_data/weiterleitungen.json", import.meta.url), "utf8"));
+    const zoneUrl = `https://api.bunny.net/pullzone/${pullZoneId}`;
+    const zone = await (await fetch(zoneUrl, { headers: { AccessKey: apiKey, Accept: "application/json" } })).json();
+    const vorhanden = new Set((zone.EdgeRules || []).map((r) => r.Description));
+    let neu = 0;
+    for (const w of liste) {
+      const name = `Weiterleitung ${w.von}`;
+      if (vorhanden.has(name)) continue;
+      const pfad = w.von.replace(/\/$/, "");
+      const regel = {
+        ActionType: 1, // Weiterleitung
+        ActionParameter1: `https://%{Request.Hostname}${w.nach}`,
+        ActionParameter2: "301",
+        TriggerMatchingType: 0, // eine Bedingung reicht
+        Triggers: [{ Type: 0, PatternMatches: [`*://*${pfad}`, `*://*${pfad}/`], PatternMatchingType: 0, Parameter1: "" }],
+        Description: name,
+        Enabled: true
+      };
+      const r = await fetch(`${zoneUrl}/edgerules/addOrUpdate`, { method: "POST", headers: { AccessKey: apiKey, "Content-Type": "application/json" }, body: JSON.stringify(regel) });
+      if (r.ok) neu++; else console.log(`Weiterleitung ${w.von} nicht angelegt: ${r.status} ${await r.text()}`);
+    }
+    console.log(`Weiterleitungen: ${liste.length} gesamt, ${neu} neu angelegt.`);
+  } catch (e) {
+    console.log("Hinweis: Weiterleitungen nicht geprüft:", e.message);
+  }
+
   const res = await fetch(`https://api.bunny.net/pullzone/${pullZoneId}/purgeCache`, { method: "POST", headers: { AccessKey: apiKey } });
   if (res.ok) {
     console.log("CDN-Cache geleert, neue Version ist online.");

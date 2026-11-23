@@ -1,0 +1,24 @@
+{
+  "_hinweis": "Alte Wix-Adressen und frühere Testadressen → neue Seiten (301). Wird bei jeder Veröffentlichung in Bunny eingetragen.",
+  "liste": [
+    { "von": "/podcast-guide", "nach": "/unternehmenskommunikation/" },
+    { "von": "/sportfotografie-stuttgart-radsport", "nach": "/ueber-mich/" },
+    { "von": "/sportfotografie-stuttgart-radsport/anfrage-sportfotograf-stuttgart", "nach": "/kontakt/" },
+    { "von": "/bildquellen", "nach": "/impressum/" },
+    { "von": "/projektintake", "nach": "/kontakt/" },
+    { "von": "/videoproduktion-loesungen-portfolio", "nach": "/#loesungen" },
+    { "von": "/videoproduktion-loesungen-portfolio/anfrage-social-media-content", "nach": "/social-media/" },
+    { "von": "/videoproduktion-loesungen-portfolio/anfrage-event-doku-videograf", "nach": "/dokumentation/" },
+    { "von": "/videoproduktion-loesungen-portfolio/anfrage-erklaervideo-industrie", "nach": "/erklaervideos/" },
+    { "von": "/video-consulting-training", "nach": "/ki-workshops/" },
+    { "von": "/video-consulting-training/anfrage-videoschnitt-postproduction", "nach": "/social-media/" },
+    { "von": "/video-consulting-training/anfrage-creator-workshop", "nach": "/ki-workshops/" },
+    { "von": "/videoproduzent-niklas-boesner", "nach": "/ueber-mich/" },
+    { "von": "/potentialanalyse-video-marketing", "nach": "/kontakt/" },
+    { "von": "/impressum", "nach": "/impressum/" },
+    { "von": "/loesungen/erklaervideo/", "nach": "/erklaervideos/" },
+    { "von": "/loesungen/social-media-content/", "nach": "/social-media/" },
+    { "von": "/loesungen/eventvideo/", "nach": "/dokumentation/" },
+    { "von": "/loesungen/podcast/", "nach": "/unternehmenskommunikation/" }
+  ]
+}
