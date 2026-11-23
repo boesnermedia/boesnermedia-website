@@ -5,6 +5,7 @@
   var danke = document.getElementById("danke");
   var steps = document.querySelectorAll(".progress li");
   var endpoint = form.getAttribute("data-endpoint");
+  var start = Date.now();
 
   function val(name) {
     var el = form.elements[name];
@@ -64,7 +65,8 @@
     if (!val("kundentyp")) return;
     if (!validate()) return;
 
-    var daten = new FormData(form);
+    form.elements["t"].value = String(Date.now() - start);
+    var daten = new URLSearchParams(new FormData(form));
     var fertig = function () {
       var neu = val("kundentyp") === "Neukunde";
       danke.querySelector('[data-out="vorname"]').textContent = val("name").split(" ")[0];
@@ -88,7 +90,8 @@
     btn.disabled = true;
     btn.textContent = "Wird gesendet …";
     fetch(endpoint, { method: "POST", body: daten })
-      .then(function (r) { if (!r.ok) throw new Error(); fertig(); })
+      .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+      .then(function (j) { if (!j || !j.ok) throw new Error(); fertig(); })
       .catch(function () {
         showError("err-senden", null, "Das hat nicht geklappt. Ihre Angaben sind noch da – bitte versuchen Sie es noch einmal oder schreiben Sie an info@boesnermedia.de.");
       })
