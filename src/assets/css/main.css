@@ -410,3 +410,7 @@ picture { display: contents; }
   .nav.open { display: flex; }
   .nav a { min-height: 44px; display: flex; align-items: center; }
 }
+
+.other-pakete.raster-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 960px) { .other-pakete.raster-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .other-pakete.raster-3 { grid-template-columns: 1fr; } }

@@ -53,9 +53,9 @@
         "bild_alt": "KI-generiertes Bild: Interview-Setup mit Kamera, Teleprompter und Softbox"
       },
       {
-        "feld": "KI-Enablement",
+        "feld": "KI & Video im Marketing",
         "name": "THE LAB",
-        "versprechen": "KI sinnvoll nutzen – ohne Hype.",
+        "versprechen": "Video-Marketing mit KI – selbst gemacht, aber richtig.",
         "video": "",
         "link": "/ki-workshops/",
         "nur_unterseiten": true
@@ -88,9 +88,9 @@
     ]
   },
   "academy": {
-    "eyebrow": "KI-Enablement · THE LAB",
-    "titel": "KI sinnvoll nutzen – ohne Hype.",
-    "text": "Ich zeige Teams, wie sie KI im Content-Alltag einsetzen: von der Idee über Skript und Schnitt bis zu Untertiteln und Übersetzung. Aus der Praxis, mit Fokus auf datenschutzkonforme Tools aus der EU.",
+    "eyebrow": "KI & Video im Marketing · THE LAB",
+    "titel": "Video-Marketing mit KI – selbst gemacht, aber richtig.",
+    "text": "Ihr Team lernt, mit Smartphone und KI regelmäßig eigene Videos fürs Marketing zu produzieren – von der Idee bis zum fertigen Clip. Workshops für kleine und mittelständische Unternehmen, mit einem System, das auch danach funktioniert.",
     "button": "Mehr zu THE LAB",
     "link": "/ki-workshops/"
   },

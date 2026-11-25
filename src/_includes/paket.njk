@@ -85,7 +85,7 @@ layout: base.njk
       <span class="eyebrow">{{ varianten_eyebrow or "Formate" }}</span>
       <h2 id="varianten-titel" class="h-display">{{ varianten_titel }}<span class="brand">.</span></h2>
     </div>
-    <div class="other-pakete">
+    <div class="other-pakete{% if varianten.length == 5 or varianten.length == 6 %} raster-3{% endif %}">
       {% for v in varianten %}<div class="other-paket" style="padding: 32px"><span class="eyebrow plain brand">{{ v.fuer }}</span><strong style="font-size: 28px; line-height: 32px">{{ v.name }}</strong><ul class="check">{% for pt in v.punkte %}<li>{{ pt }}</li>{% endfor %}</ul></div>{% endfor %}
     </div>
   </div>
