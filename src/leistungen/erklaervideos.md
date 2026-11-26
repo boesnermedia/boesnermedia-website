@@ -2,13 +2,13 @@
 layout: paket.njk
 permalink: /erklaervideos/
 title: "Technische Erklärvideos – THE EXPLAINER"
-description: "Technische Erklärvideos für Industrie, Maschinenbau und Hersteller aus Winnenden: Anwendungsvideos, Trainingsserien und Produkt-Pitches mit Motion Design und Sprachversionen."
+description: "Anwendungs- und Trainingsvideos für Maschinen, Werkzeuge und Technik aus Winnenden: ganze Videoserien aus einem Drehtag, mit Motion Design und Sprachversionen – für Hersteller in Region Stuttgart und Rems-Murr."
 name: THE EXPLAINER
 feld: Technische Erklärvideos
 kurzname: Explainer
-eyebrow: "Technische Erklärvideos · Industrie, Hersteller, Schulung"
+eyebrow: "Anwendungs- und Trainingsvideos · Maschinen, Werkzeuge, Technik"
 claim: "Komplexe Technik, sofort verstanden."
-intro: "Ich verstehe Technik und stelle beim Dreh die richtigen Fragen. Daraus entstehen Videos, die Ihren Vertrieb beschleunigen, Händler und Mitarbeiter schulen und Ihren Support entlasten."
+intro: "Ich verstehe Technik und stelle beim Dreh die richtigen Fragen. Aus einem Drehtag entsteht eine ganze Serie von Anwendungs- und Trainingsvideos für Ihre Maschinen und Werkzeuge – die Ihren Vertrieb beschleunigen, Händler und Mitarbeiter schulen und Ihren Support entlasten."
 video: "/assets/uploads/explainer-fs44.mp4"
 video_poster: "/assets/uploads/explainer-fs44-poster.jpg"
 ziel_titel: "Wofür Unternehmen den Explainer einsetzen"
@@ -19,9 +19,9 @@ ziele:
     text: "Anwendung und Bedienung bleiben verständlich – in jeder Sprache."
   - titel: Support entlasten
     text: "Wiederkehrende Fragen beantwortet das Video, nicht Ihr Team."
-zielgruppe: "Industrie, Hersteller und Schulungsabteilungen"
+zielgruppe: "Hersteller von Maschinen, Werkzeugen und Technik"
 dauer: "weniger als 4 Wochen"
-varianten_eyebrow: "Drei Formate"
+varianten_eyebrow: "Vier Formate"
 varianten_titel: "Ein Video oder eine ganze Serie"
 varianten:
   - name: Anwendungsvideo
@@ -29,6 +29,12 @@ varianten:
     punkte:
       - "Ein Video von 1 bis 3 Minuten"
       - "Ein halber Drehtag"
+  - name: Serie aus einem Drehtag
+    fuer: "Für eine Produktlinie oder ein Thema"
+    punkte:
+      - "Ein Drehtag bei Ihnen"
+      - "5 bis 8 Videos von 1 bis 3 Minuten"
+      - "Einheitlicher Look, Untertitel inklusive"
   - name: Trainingsserie
     fuer: "Für Schulung von Händlern und Mitarbeitern"
     punkte:
@@ -98,6 +104,8 @@ bausteine:
     text: "Drohnenaufnahmen innen und außen, inklusive Genehmigungen."
   - name: Express
     text: "Lieferung in unter einer Woche, wenn es schnell gehen muss."
+  - name: THE LAB Workshop
+    text: "Ihr Team lernt, kurze Clips für Social Media selbst mit Smartphone und KI zu machen."
 beispiel: ""
 faq:
   - frage: "Wie lange dauert ein Erklärvideo?"
@@ -106,6 +114,8 @@ faq:
     antwort: "Wie Sie möchten. Ich schreibe das Skript aus Ihren Inhalten – oder prüfe Ihr eigenes vor dem Dreh."
   - frage: "Muss unser Betrieb für den Dreh stillstehen?"
     antwort: "Nein. Ich drehe als One-Man-Squad mit mobilem Licht und plane so, dass laufende Prozesse möglichst nicht gestört werden."
+  - frage: "Lohnt sich das für mehrere Produkte?"
+    antwort: "Gerade dann. Mit guter Vorbereitung entstehen an einem Drehtag 5 bis 8 kurze Anwendungs- oder Trainingsvideos – für eine ganze Produktlinie, im gleichen Look."
   - frage: "Gibt es die Videos auch in anderen Sprachen?"
     antwort: "Ja. Mit Untertiteln, KI-Übersetzung mit Lippenanpassung oder KI-Sprecherstimme – pro Sprache als Modul."
   - frage: "Bleiben unsere Inhalte vertraulich?"

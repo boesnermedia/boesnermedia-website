@@ -2,13 +2,13 @@
 layout: paket.njk
 permalink: /ki-workshops/
 title: "KI & Video im Marketing – THE LAB Workshops für KMU"
-description: "Workshops aus Winnenden für kleine und mittelständische Unternehmen: Mit Smartphone und KI regelmäßig eigenen Video-Content fürs Marketing produzieren – von der Idee bis zum fertigen Clip."
+description: "KI-Workshops aus Winnenden für den Mittelstand in Region Stuttgart und Rems-Murr: KI sicher nutzen und mit Smartphone eigenen Video-Content produzieren – mit Teilnahmebescheinigung als Nachweis zur KI-Kompetenz."
 name: THE LAB
 feld: KI & Video im Marketing
 kurzname: THE LAB
 eyebrow: "KI & Video im Marketing · Workshops für KMU"
 claim: "Video-Marketing mit KI – selbst gemacht, aber richtig."
-intro: "Kein Budget für eine dauerhafte Agentur, keine Zeit, und KI-Tools überfordern eher, als dass sie helfen? In THE LAB lernt Ihr Team, mit Smartphone und KI regelmäßig eigene Videos fürs Marketing zu produzieren – von der Idee bis zum fertigen Clip. Mit einem System, das auch nach dem Workshop funktioniert."
+intro: "Ihr Team nutzt KI längst – aber ohne Plan und ohne klare Regeln? In einem halben Tag bei Ihnen lernt es, KI sicher einzusetzen und mit Smartphone und KI eigene Videos fürs Marketing zu produzieren. Jede Person bekommt eine Teilnahmebescheinigung, und Ihr Team geht mit den ersten fertigen Clips raus."
 video: ""
 bild: "/assets/uploads/ki-workshop.jpg"
 bild_alt: "KI-generiertes Bild: kleiner Workshop mit Laptops an einem Holztisch, auf einem Bildschirm ein Workflow-Diagramm"
@@ -19,9 +19,9 @@ ziele:
     text: "Themenplan, Skript-Vorlagen, Prompt-Bibliothek, Dreh-Setup und Schnitt-Workflow – fertig für den Alltag."
   - titel: Die ersten fertigen Clips
     text: "Nicht nur Theorie: Im Workshop entstehen echte Videos für Ihre Kanäle."
-  - titel: Sicherheit im Umgang mit KI
-    text: "Welche Tools sich lohnen, was erlaubt ist und was Sie kennzeichnen müssen."
-zielgruppe: "Inhaber und kleine Marketing-Teams in KMU, Handel und Handwerk"
+  - titel: KI-Kompetenz mit Nachweis
+    text: "Welche Tools sich lohnen, was erlaubt ist, was Sie kennzeichnen müssen – dokumentiert mit einer Teilnahmebescheinigung für jede Person."
+zielgruppe: "Mittelstand, Industrie, Handel und Handwerk"
 ablauf_eyebrow: "Sechs Module"
 ablauf_titel: "Von der Idee bis zum fertigen Clip"
 cta_titel: "Lassen Sie uns über Ihr Team sprechen."
@@ -37,19 +37,20 @@ varianten:
     fuer: "Für Teams bis 10 Personen"
     punkte:
       - "Ein halber Tag bei Ihnen"
-      - "Strategie, Skript und KI-Workflow"
+      - "KI sicher nutzen, Skript, Dreh und Schnitt"
+      - "Teilnahmebescheinigung für jede Person"
+  - name: THE LAB Begleitung
+    fuer: "Damit es im Alltag weiterläuft"
+    punkte:
+      - "3 Monate nach dem Workshop"
+      - "Monatlicher Call und Feedback auf Ihre eigenen Videos"
+      - "Vorlagen und Prompts werden mit Ihnen weiterentwickelt"
   - name: THE LAB Day
     fuer: "Für Teams, die direkt loslegen wollen"
     punkte:
       - "Ein ganzer Tag im Betrieb"
       - "Workshop, gemeinsamer Dreh und Schnitt mit KI"
       - "Ihr Team geht mit 3 bis 5 fertigen Clips raus"
-  - name: THE LAB System
-    fuer: "Für dauerhaft eigenen Content"
-    punkte:
-      - "THE LAB Day plus komplettes Setup"
-      - "Equipment-Empfehlung, Vorlagen, Prompt-Bibliothek, Content-Kalender"
-      - "3 Monate monatliches Feedback auf Ihre eigenen Videos"
   - name: THE LAB Online
     fuer: "Zum Selbstlernen – in Vorbereitung"
     punkte:
@@ -91,9 +92,12 @@ inklusive:
   - "Praxis aus wöchentlicher Social-Media-Arbeit statt Theorie"
   - "Fokus auf EU- und datenschutzkonforme Tools"
   - "Vorlagen und Prompts zum Weiterverwenden"
+  - "Teilnahmebescheinigung mit Datum, Dauer und Inhalten"
   - "Vor Ort bei Ihnen oder online"
 bausteine_text: "THE LAB ist auch der Einstieg in die Zusammenarbeit. Wer später mehr will, ergänzt:"
 bausteine:
+  - name: THE EXPLAINER
+    text: "Anwendungs- und Schulungsvideos zu Ihren Produkten und Maschinen – professionell produziert, als Serie aus einem Drehtag."
   - name: Content Sprint
     text: "Ein professioneller Drehtag, wenn es einmal größer werden soll."
   - name: Schnitt-Service
@@ -103,15 +107,19 @@ bausteine:
 beispiel: ""
 faq:
   - frage: "Für wen ist THE LAB gedacht?"
-    antwort: "Für kleine und mittelständische Unternehmen – Inhaber und kleine Marketing-Teams mit ein bis fünf Personen, aus Handel, Handwerk und Mittelstand."
+    antwort: "Für kleine und mittelständische Unternehmen aus Industrie, Handel und Handwerk – für Marketing, Vertrieb, Service und Geschäftsführung, typischerweise vier bis zehn Personen."
   - frage: "Brauchen wir teure Technik?"
-    antwort: "Nein. Gedreht wird mit dem Smartphone. Beim THE LAB System bekommen Sie zusätzlich eine Empfehlung für sinnvolles Zubehör."
+    antwort: "Nein. Gedreht wird mit dem Smartphone. Ansteckmikros und Stative bringe ich zum Workshop mit, danach bekommen Sie eine Empfehlung für sinnvolles Zubehör."
   - frage: "Braucht mein Team Vorwissen?"
     antwort: "Nein. Wir starten bei Ihrem Stand und gehen so weit, wie es für Ihren Alltag sinnvoll ist."
   - frage: "Geht es darum, Videos komplett mit KI zu erzeugen?"
     antwort: "Nein. KI hilft bei Ideen, Skript, Schnitt, Untertiteln und Übersetzung. Die Videos zeigen Ihren echten Betrieb und Ihre echten Menschen."
   - frage: "Was ist mit Datenschutz und Rechten?"
     antwort: "Das ist ein eigenes Modul. Ich zeige bewusst Tools, die datenschutzkonform nutzbar sind, und erkläre Musiklizenzen und KI-Kennzeichnung."
+  - frage: "Hilft der Workshop beim EU AI Act?"
+    antwort: "Seit Februar 2025 müssen Unternehmen, die KI einsetzen, Maßnahmen zur KI-Kompetenz ihres Personals ergreifen (Art. 4 KI-Verordnung). Der Workshop ist eine solche Maßnahme, und die Teilnahmebescheinigung dokumentiert Datum, Dauer und Inhalte. Eine Rechtsberatung ersetzt er nicht."
+  - frage: "Gibt es eine Förderung?"
+    antwort: "Inhouse-Workshops für ein einzelnes Unternehmen sind von der ESF-Fachkursförderung in Baden-Württemberg ausgenommen. Gefördert werden offene Kurse über einen Bildungsträger. Ein solcher offener Kurs ist für 2027 in Planung – fragen Sie gern nach Terminen."
   - frage: "Wann kommt der Online-Kurs?"
     antwort: "THE LAB Online ist für Ende 2027 geplant. Schreiben Sie mir, wenn Sie informiert werden möchten."
   - frage: "Was kostet THE LAB?"
